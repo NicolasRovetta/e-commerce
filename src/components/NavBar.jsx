@@ -8,9 +8,8 @@ function NavBar() {
     <div>Smartphones</div>
     <div>Notebooks</div>
     <div>Accesorios</div>
-    <div>{CartWidget}</div>
+    <div><button><CartWidget/></button></div>
     </>
   )
 }
-
 export default NavBar
