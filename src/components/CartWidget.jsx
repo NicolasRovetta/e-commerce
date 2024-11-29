@@ -1,6 +1,6 @@
 function CartWidget() {
   return (
-    <div>CartWidget</div>
+    <img src=".assets/cartWidget.png" alt="logoCart" className="cartWidget"/>
   )
 }
 
