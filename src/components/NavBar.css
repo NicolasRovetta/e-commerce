@@ -1,5 +1,19 @@
-*{
+
+
+.navbar{  
+    background-color: deepskyblue;  
+    display: flex;
+    flex-direction: row;
     height: 20vh;
-    width: 100%;
-    background-color: deepskyblue;
+    margin:0;
+    width: 95%;
+}
+
+button{
+    height: 20vh;
+    border: 1px solid #fff;
+}
+
+button:hover{
+    cursor: pointer;
 }

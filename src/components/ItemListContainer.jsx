@@ -1,6 +1,8 @@
-function ItemListContainer() {
+import './ItemListContainer.css'
+
+function ItemListContainer(props) {
   return (
-    <div><h2>ItemListContainer</h2></div>
+    <div className='container'><h2>ItemListContainer</h2></div>
   )
 }
 

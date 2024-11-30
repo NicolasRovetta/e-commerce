@@ -1,6 +1,9 @@
+import './CartWidget.css'
+import cart from '../assets/cartWidget.png'
+
 function CartWidget() {
   return (
-    <img src=".assets/cartWidget.png" alt="logoCart" className="cartWidget"/>
+    <img src={cart} alt="logoCart"/>
   )
 }
 
