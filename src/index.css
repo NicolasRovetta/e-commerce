@@ -4,8 +4,9 @@
 
 body {
   margin: 0;
-  display: flex;
-  flex-direction: column;
+  display: flexbox;
+  flex-direction: row;
+  flex-wrap: wrap;
   width: 100%;
   height: auto;
 }
