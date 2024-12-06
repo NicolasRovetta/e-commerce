@@ -1,32 +1,37 @@
-.container{
-    border: 1px solid #fff;
-    margin: 0;
-    display: flexbox;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content:space-evenly;
-    background-color: #0866ff;
-    min-height: 80vh;
-    width: 100%;
+.container {
+  /* Estilos generales del contenedor */
+  border: 1px solid #fff;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  background-color: #0866ff;
+  min-height: 80vh;
+  width: 100%;
 }
 
-.container div{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    width: 100%;
-    
-    
+.container div {
+  /* Estilos para el contenedor interno (opcional) */
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
 }
 
-.card{
-    margin: 1rem;
-    display: flex; 
-    flex-wrap: wrap;
-    min-height: 250px;
-    flex: 1;
-    width: 30%;    
-    background-color:rgb(240, 248, 255, 0.5);
-    color: black;
-    border-radius: 15px;
+.card {
+  /* Estilos para cada tarjeta */
+  align-content: center;
+  margin: 1rem;
+  display: flex;
+  flex-direction: column; /* Apilamos los elementos dentro de la tarjeta verticalmente */
+  flex-wrap: wrap;
+  flex: 0 0 25%; /* Ancho fijo del 25% para cada tarjeta */
+  justify-content: center; /* Centra el contenido horizontalmente */
+  align-items: center;
+  max-width: 25%; /* Límite máximo del ancho para pantallas pequeñas */
+  background-color: rgba(240, 248, 255, 0.5);
+  color: black;
+  border-radius: 15px;
+  padding: 20px
 }
