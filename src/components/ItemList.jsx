@@ -11,7 +11,7 @@ function ItemList({items}) {
              modelo={item.modelo}
              precio={item.precio}
              descripcion={item.descripcion}
-             // puedo agregar lo que quiero mostrar en la card del item
+             
          />
       ))}
     </div>
