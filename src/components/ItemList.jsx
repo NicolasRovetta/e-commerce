@@ -4,14 +4,36 @@ import { useState } from "react";
 function ItemList({ items }) {
   const [selectedCategory, setSelectedCategory] = useState("");
 
-  const filteredItems = selectedCategory ? items.filter((item) => item.categoria === selectedCategory) : items;
-
+  const filteredItems = selectedCategory
+    ? items.filter((item) => item.categoria === selectedCategory)
+    : items;
+  const handleClearFilter = () => {
+    setSelectedCategory("");
+  };
   return (
     <div>
       <div>
-        <button className="buttonFilter" onClick={() => setSelectedCategory("MacBook")}>MacBook</button>
-        <button className="buttonFilter" onClick={() => setSelectedCategory("iPhone")}>iPhone</button>
-        <button className="buttonFilter" onClick={() => setSelectedCategory("Accesorio")}>Accesorio</button>
+        <button
+          className="buttonFilter"
+          onClick={() => setSelectedCategory("MacBook")}
+        >
+          MacBook
+        </button>
+        <button
+          className="buttonFilter"
+          onClick={() => setSelectedCategory("iPhone")}
+        >
+          iPhone
+        </button>
+        <button
+          className="buttonFilter"
+          onClick={() => setSelectedCategory("Accesorio")}
+        >
+          Accesorio
+        </button>
+        <button className="buttonFilter" onClick={handleClearFilter}>
+          Vaciar Filtro
+        </button>
       </div>
       {filteredItems.map((item) => (
         <Item
