@@ -10,7 +10,7 @@ function ItemListContainer() {
         const fetchProductos = new Promise((resolve)=> {    // se genera una promesa para simular peticion a API ,reject no hay porque la peticion es a nuestra propia db
           setTimeout(() => {
                 resolve(productos)
-          },2000)  // se ejecuta despues de 2seg
+          },[])  
         })
 
         fetchProductos.then((data) => {

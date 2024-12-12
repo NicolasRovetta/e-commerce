@@ -37,3 +37,9 @@
 .card div { /* Suponiendo que los elementos dentro de .card son divs */
   margin-bottom: 0.05em; /* Espacio entre elementos */
 }
+
+.buttonFilter{
+  margin-top: 0.5em;
+  background-color: #0751c9;
+  border-radius: 15%;
+}

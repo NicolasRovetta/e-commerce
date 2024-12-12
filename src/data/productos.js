@@ -1,5 +1,4 @@
 export const productos = [
-  // MacBooks
   {
     id: 1,
     categoria: "MacBook",
@@ -9,7 +8,7 @@ export const productos = [
     almacenamiento: "256GB SSD",
     precio: 1500,
     descripcion:
-      "Portátil compacto y potente con un diseño elegante. Ideal para tareas diarias y profesionales creativos."
+      "Portátil compacto y potente con un diseño elegante. Ideal para tareas diarias y profesionales creativos.",
   },
   {
     id: 2,
@@ -18,9 +17,9 @@ export const productos = [
     procesador: "M1 Pro",
     ram: "16GB",
     almacenamiento: "512GB SSD",
-    precio: 2000,
+    precio: 2e3,
     descripcion:
-      "La potencia de un ordenador de sobremesa en un portátil. Pantalla Liquid Retina XDR de alta resolución y un rendimiento excepcional."
+      "La potencia de un ordenador de sobremesa en un portátil. Pantalla Liquid Retina XDR de alta resolución y un rendimiento excepcional.",
   },
   {
     id: 3,
@@ -31,7 +30,7 @@ export const productos = [
     almacenamiento: "256GB SSD",
     precio: 1200,
     descripcion:
-      "Portátil ligero y portátil con una batería de larga duración. Perfecto para estudiantes y usuarios que buscan un equipo versátil."
+      "Portátil ligero y portátil con una batería de larga duración. Perfecto para estudiantes y usuarios que buscan un equipo versátil.",
   },
   {
     id: 4,
@@ -42,7 +41,7 @@ export const productos = [
     almacenamiento: "512GB SSD",
     precio: 1800,
     descripcion:
-      "El nuevo MacBook Pro de 14 pulgadas ofrece un equilibrio perfecto entre portabilidad y rendimiento."
+      "El nuevo MacBook Pro de 14 pulgadas ofrece un equilibrio perfecto entre portabilidad y rendimiento.",
   },
   {
     id: 5,
@@ -53,7 +52,7 @@ export const productos = [
     almacenamiento: "256GB SSD",
     precio: 1300,
     descripcion:
-      "La nueva generación del MacBook Air con el chip M2 ofrece un rendimiento aún más rápido y eficiente."
+      "La nueva generación del MacBook Air con el chip M2 ofrece un rendimiento aún más rápido y eficiente.",
   },
   {
     id: 6,
@@ -64,10 +63,8 @@ export const productos = [
     almacenamiento: "1TB SSD",
     precio: 3500,
     descripcion:
-      "El MacBook Pro más potente hasta la fecha, diseñado para profesionales que demandan el máximo rendimiento."
+      "El MacBook Pro más potente hasta la fecha, diseñado para profesionales que demandan el máximo rendimiento.",
   },
-
-  // iPhones
   {
     id: 7,
     categoria: "iPhone",
@@ -76,7 +73,7 @@ export const productos = [
     camara: "Pro",
     precio: 800,
     descripcion:
-      "El iPhone 13 ofrece un rendimiento increíble y nuevas funciones de cámara."
+      "El iPhone 13 ofrece un rendimiento increíble y nuevas funciones de cámara.",
   },
   {
     id: 8,
@@ -85,9 +82,9 @@ export const productos = [
     pantalla: "Super Retina XDR",
     camara: "Pro",
     teleobjetivo: "3x",
-    precio: 1000,
+    precio: 1e3,
     descripcion:
-      "El iPhone 13 Pro cuenta con un sistema de triple cámara y un teleobjetivo para fotos con zoom óptico."
+      "El iPhone 13 Pro cuenta con un sistema de triple cámara y un teleobjetivo para fotos con zoom óptico.",
   },
   {
     id: 9,
@@ -97,7 +94,7 @@ export const productos = [
     camara: "Dual",
     precio: 799,
     descripcion:
-      "El iPhone 14 presenta un nuevo diseño y mejoras en la cámara."
+      "El iPhone 14 presenta un nuevo diseño y mejoras en la cámara.",
   },
   {
     id: 10,
@@ -108,10 +105,8 @@ export const productos = [
     teleobjetivo: "3x",
     precio: 1199,
     descripcion:
-      "El iPhone 14 Pro Max es el iPhone más grande y potente hasta la fecha."
+      "El iPhone 14 Pro Max es el iPhone más grande y potente hasta la fecha.",
   },
-
-  // Accesorios
   {
     id: 11,
     categoria: "Accesorio",
@@ -119,7 +114,7 @@ export const productos = [
     modelo: "USB-C a Lightning",
     longitud: "1 metro",
     precio: 20,
-    descripcion: "Cable oficial de Apple para cargar y sincronizar tu iPhone."
+    descripcion: "Cable oficial de Apple para cargar y sincronizar tu iPhone.",
   },
   {
     id: 12,
@@ -128,7 +123,7 @@ export const productos = [
     modelo: "USB-C",
     potencia: "20W",
     precio: 30,
-    descripcion: "Cargador compacto y rápido para iPhone y iPad."
+    descripcion: "Cargador compacto y rápido para iPhone y iPad.",
   },
   {
     id: 13,
@@ -138,7 +133,7 @@ export const productos = [
     color: "Negro",
     compatible: "iPhone 13",
     precio: 40,
-    descripcion: "Funda oficial de Apple para proteger tu iPhone."
+    descripcion: "Funda oficial de Apple para proteger tu iPhone.",
   },
   {
     id: 14,
@@ -147,7 +142,7 @@ export const productos = [
     modelo: "AirPods Pro",
     caracteristicas: "Cancelación de ruido activa",
     precio: 250,
-    descripcion: "Los AirPods Pro ofrecen una experiencia de audio inmersiva."
+    descripcion: "Los AirPods Pro ofrecen una experiencia de audio inmersiva.",
   },
   {
     id: 15,
@@ -157,7 +152,7 @@ export const productos = [
     compatible: "MacBook",
     precio: 100,
     descripcion:
-      "Teclado inalámbrico con Touch ID para una mayor comodidad y seguridad."
+      "Teclado inalámbrico con Touch ID para una mayor comodidad y seguridad.",
   },
   {
     id: 16,
@@ -166,9 +161,6 @@ export const productos = [
     modelo: "Magic Mouse",
     compatible: "MacBook",
     precio: 80,
-    descripcion: "Ratón multi-gesto para una navegación más intuitiva."
+    descripcion: "Ratón multi-gesto para una navegación más intuitiva.",
   },
 ];
-
-
-export default productos
