@@ -40,6 +40,11 @@
 
 .buttonFilter{
   margin-top: 0.5em;
-  background-color: #0751c9;
+  background-color: #1262e2;
+  border-radius: 15%;
+}
+.clear-filter-button{
+  margin-top: 0.5em;
+  background-color: #d6d6d6;
   border-radius: 15%;
 }

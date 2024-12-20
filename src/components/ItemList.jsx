@@ -31,8 +31,8 @@ function ItemList({ items }) {
         >
           Accesorio
         </button>
-        <button className="buttonFilter" onClick={handleClearFilter}>
-          Vaciar Filtro
+        <button className="clear-filter-button" onClick={handleClearFilter}>
+          Quitar filtro
         </button>
       </div>
       {filteredItems.map((item) => (

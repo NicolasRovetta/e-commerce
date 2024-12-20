@@ -1,0 +1,97 @@
+body {
+  margin: 0;
+  display: flex
+;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  width: 100%;
+  height: auto;
+  align-content: center;
+}
+
+.logo {
+  display: flex;
+  padding: 0;
+  width: 3em;
+  height: 3em;
+  margin: 1em;
+}
+
+.logo img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+/* Layout.css */
+nav {
+  height: 20vh;
+  width: 100%;
+  display: flex;
+  align-items: center; /* Centra verticalmente */
+  padding: 0 20px; /* Espacio a los lados */
+  box-sizing: border-box; /* Incluye padding en el ancho */
+  background-color: #f0f0f0; /* Color de fondo opcional */
+  position: relative; /* Importante para el posicionamiento absoluto del ul */
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100%; /* Ocupa todo el ancho del nav */
+  justify-content: space-around; /* Distribución equitativa */
+  align-items: center;
+  position: absolute; /* Para que ocupe todo el nav independientemente del contenido */
+  top: 0;
+  left: 0;
+  height: 100%; /* Ocupa toda la altura del nav */
+}
+
+nav li {
+  display: flex;
+  align-items: center;
+  white-space: nowrap; /* Evita que el texto se corte */
+}
+
+/* Estilos para los elementos <Link> */
+nav a, nav .active {
+  text-decoration: none;
+  color: #333;
+  padding: 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+nav a:hover, nav .active:hover {
+  background-color: #ddd;
+}
+
+nav .active {
+  font-weight: bold;
+  background-color: #bbbbbb;
+}
+
+/* Media Query para pantallas más pequeñas */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    position: relative; /* Regresa al posicionamiento relativo para el responsive */
+    height: auto;
+  }
+  nav li {
+    margin: 5px 0;
+    width: 100%;
+    text-align: center; /* Centra el texto en pantallas pequeñas */
+  }
+    nav {
+    height: auto;
+    padding: 10px;
+    flex-direction: column;
+  }
+    .logo {
+    max-height: 60%;
+    margin: 0 auto; /* Centra el logo */
+  }
+}
