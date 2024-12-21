@@ -22,14 +22,8 @@ function Layout() {
             <Link to="productos">Productos</Link> 
           </li>
           <li>
-            <Link to="smartphones">Smartphones</Link> 
-          </li>
-          <li>
-            <Link to="notebooks">Notebooks</Link> 
-          </li>
-          <li>
-            <Link to="accesorios">Accesorios</Link> 
-          </li>
+            <Link to="nosotros">Nosotros</Link> 
+          </li>          
           <li>
             <Link to="cart"> 
               <CartWidget />

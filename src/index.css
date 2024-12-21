@@ -11,6 +11,21 @@ body {
   height: auto;
 }
 
+.cartPosition{
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
+}
+.logoCart{
+  height: 1.5em;
+  width: 1.5em;
+}
 
+h2{
+  text-align: center;
+}
 
+.text{
+  padding: 0 100px;
+}
 
