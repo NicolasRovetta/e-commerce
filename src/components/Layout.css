@@ -1,7 +1,7 @@
 body {
+  background-color: #0866ff;
   margin: 0;
-  display: flex
-;
+  display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
   width: 100%;
@@ -22,16 +22,16 @@ body {
   max-height: 100%;
 }
 
-/* Layout.css */
 nav {
+  border-bottom: 1px solid #fff;
   height: 20vh;
   width: 100%;
   display: flex;
-  align-items: center; /* Centra verticalmente */
-  padding: 0 20px; /* Espacio a los lados */
-  box-sizing: border-box; /* Incluye padding en el ancho */
-  background-color: #f0f0f0; /* Color de fondo opcional */
-  position: relative; /* Importante para el posicionamiento absoluto del ul */
+  align-items: center; 
+  padding: 0 20px; 
+  box-sizing: border-box; 
+  background-color: #0866ff; 
+  position: relative; 
 }
 
 nav ul {
@@ -39,28 +39,27 @@ nav ul {
   list-style: none;
   margin: 0;
   padding: 0;
-  width: 100%; /* Ocupa todo el ancho del nav */
-  justify-content: space-around; /* Distribución equitativa */
+  width: 100%; 
+  justify-content: space-around; 
   align-items: center;
-  position: absolute; /* Para que ocupe todo el nav independientemente del contenido */
+  position: absolute; 
   top: 0;
   left: 0;
-  height: 100%; /* Ocupa toda la altura del nav */
+  height: 100%; 
 }
 
 nav li {
   display: flex;
   align-items: center;
-  white-space: nowrap; /* Evita que el texto se corte */
+  white-space: nowrap; 
 }
 
-/* Estilos para los elementos <Link> */
 nav a, nav .active {
   text-decoration: none;
   color: #333;
   padding: 10px;
   border-radius: 5px;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.2s ease;
 }
 
 nav a:hover, nav .active:hover {
@@ -72,18 +71,17 @@ nav .active {
   background-color: #bbbbbb;
 }
 
-/* Media Query para pantallas más pequeñas */
 @media (max-width: 768px) {
   nav ul {
     flex-direction: column;
     align-items: center;
-    position: relative; /* Regresa al posicionamiento relativo para el responsive */
+    position: relative; 
     height: auto;
   }
   nav li {
     margin: 5px 0;
     width: 100%;
-    text-align: center; /* Centra el texto en pantallas pequeñas */
+    text-align: center; 
   }
     nav {
     height: auto;
@@ -92,6 +90,6 @@ nav .active {
   }
     .logo {
     max-height: 60%;
-    margin: 0 auto; /* Centra el logo */
+    margin: 0 auto; 
   }
 }
