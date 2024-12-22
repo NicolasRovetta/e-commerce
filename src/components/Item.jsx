@@ -1,12 +1,13 @@
-function Item({ nombre, categoria, modelo, precio, descripcion }) {
+import { Link } from "react-router-dom";
+
+function Item({  categoria, modelo, precio, descripcion, id }) {
   return (
-    <div className="card">
+    <Link to={`/productos/${id}`} className="card">
       <div>{categoria}</div>
-      <div>{nombre}</div>
       <div><h3>{modelo}</h3></div>
       <div><p>{descripcion}</p></div>
       <div><strong>Precio: ${precio}</strong></div>
-    </div>
+    </Link>
   );
 }
 

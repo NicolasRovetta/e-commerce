@@ -1,6 +1,5 @@
 import Item from "./Item";
 import { useState } from "react";
-
 function ItemList({ items }) {
   const [selectedCategory, setSelectedCategory] = useState("");
 
@@ -36,8 +35,8 @@ function ItemList({ items }) {
         </button>
       </div>
       {filteredItems.map((item) => (
-        <Item
-          key={item.id} // lo usa react para renderizar en el VDOM solamente lo necesario y ser mas eficiente
+        <Item          
+          id={item.id} 
           nombre={item.nombre}
           categoria={item.categoria}
           modelo={item.modelo}
