@@ -2,7 +2,7 @@
 
 function Nosotros() {
   return (
-    <div>
+    <div className="homeNosotros">
       <h2>Nosotros: Más que una tienda, una experiencia Apple</h2>
       <p className="text">
           En iStore, te invitamos a sumergirte en el ecosistema Apple. No solo

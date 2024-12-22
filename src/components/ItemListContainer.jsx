@@ -16,7 +16,7 @@ function ItemListContainer() {
         fetchProductos.then((data) => {
            setItems(data)
         })
-     },[]) // array vacio para que se ejecute una vez,solo para traerme el [ptos]
+     },[2000]) // retraso en mseg, de simulacion de peticion a API
 
   return (
     <div className='container'>     

@@ -2,7 +2,7 @@
 
 function Home() {
   return (
-    <div>
+    <div className="homeNosotros">
       <h2>iStore</h2>
       <p className="text">
         "Bienvenido a iStore, tu destino ideal para sumergirte en el ecosistema

@@ -1,19 +1,23 @@
 import { productos } from '../data/productos';
 import { useParams } from 'react-router-dom'
+import Error from './Error'
 
 function DetalleProducto(){
     const{id} = useParams();
     const producto = productos.find(prod => prod.id === parseInt(id));
     
     if(!producto){
-        return <h2>El producto no existe</h2>
+        return (
+            <div className='errorFullScreen'>
+                <Error />
+            </div>
+        );
     }
     return (
         <div className='detalleProducto'>
-            <h2>Detalle del producto</h2>
             <h2>{producto.modelo}</h2>
             <p>{producto.descripcion}</p>
-            <h3>{producto.precio}</h3>
+            <h3><strong>Precio: ${producto.precio}</strong></h3>
         </div>
     )
 }
