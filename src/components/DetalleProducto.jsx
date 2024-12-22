@@ -9,7 +9,7 @@ function DetalleProducto(){
         return <h2>El producto no existe</h2>
     }
     return (
-        <div>
+        <div className='detalleProducto'>
             <h2>Detalle del producto</h2>
             <h2>{producto.modelo}</h2>
             <p>{producto.descripcion}</p>

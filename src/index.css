@@ -16,6 +16,15 @@ body {
   flex-direction: column; 
   align-items: center;
 }
+
+.detalleProducto{
+  margin: 0 250px;
+  padding: 0 100px;
+  background-color: grey;
+  border-radius: 10px;
+  text-align: center;
+}
+
 .logoCart{
   height: 1.5em;
   width: 1.5em;
