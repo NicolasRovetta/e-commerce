@@ -2,6 +2,12 @@
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;  
 }
 
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
   margin: 0;
   display: flex;
@@ -9,6 +15,9 @@ body {
   flex-wrap: wrap;
   width: 100%;
   height: auto;
+  font-family: 'Roboto', sans-serif;
+  background-color: #f0f4f8;
+  color: #333;
 }
 
 .cartPosition{
@@ -62,10 +71,45 @@ h2{
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: white; /* o el color de fondo que prefieras */
+  background-color: white; 
 }
 
 .text{
   padding: 0 250px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #111827;
+  margin-bottom: 20px;
+}
+
+p {
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+a {
+  color: #3b82f6;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+a:hover {
+  color: #2563eb;
+}
+
+button {
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+button:hover {
+  background-color: #2563eb;
+  transform: translateY(-2px);
 }
 

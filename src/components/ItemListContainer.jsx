@@ -7,16 +7,16 @@ function ItemListContainer() {
      const [items,setItems]=useState([])
 
      useEffect(()=>{
-        const fetchProductos = new Promise((resolve)=> {    // se genera una promesa para simular peticion a API ,reject no hay porque la peticion es a nuestra propia db
+        const fetchProductos = new Promise((resolve)=> {    
           setTimeout(() => {
                 resolve(productos)
-          },[])  
+          }, 2000)  // retraso en mseg, de simulacion de peticion a API
         })
 
         fetchProductos.then((data) => {
            setItems(data)
         })
-     },[2000]) // retraso en mseg, de simulacion de peticion a API
+     }, []) // array de dependencias vacío para que se ejecute solo una vez
 
   return (
     <div className='container'>     
