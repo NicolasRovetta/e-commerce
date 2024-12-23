@@ -13,9 +13,11 @@ function ItemList({ items }) {
   };
   return (
     <div style={{ textAlign: "center", marginTop: "1em" }}>
-      <button
-        className="buttonFilter"
-        onClick={() => setShowFilters(!showFilters)}>Filtrar</button>
+      <div style={{ display: "flex", justifyContent: "center", marginBottom: "1em" }}>
+        <button
+          className="buttonFilter"
+          onClick={() => setShowFilters(!showFilters)}>Filtrar</button>
+      </div>
       {showFilters && (
         <div>
           <button

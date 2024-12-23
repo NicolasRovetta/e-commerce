@@ -1,6 +1,8 @@
-.container {  
-  border: 1px solid #fff;
-  margin: 3px;
+.container {
+  border-width: 1px 5px 1px 5px;
+  border-style: solid;
+  border-color: black;
+  margin: 0;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -10,11 +12,11 @@
   max-width: 100%;
 }
 
-.container div {  
+.container div {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content:space-evenly;
+  justify-content: space-evenly;
   width: 100%;
 }
 
@@ -22,43 +24,51 @@
   align-content: center;
   margin: 0.5em;
   display: flex;
-  flex-direction: column; 
+  flex-direction: column;
   flex-wrap: wrap;
-  flex: 0 0 25%; 
-  justify-content: center; 
+  flex: 0 0 25%;
+  justify-content: center;
   align-items: flex-start;
-  max-width: 25%; 
+  max-width: 25%;
   background-color: rgba(240, 248, 255, 0.5);
   color: black;
   border-radius: 15px;
   padding: 1em;
   min-height: auto;
 }
-.card div { 
-  margin-bottom: 0.05em; 
+.card div {
+  margin-bottom: 0.05em;
 }
 
-.buttonFilter, .clear-filter-button {
-  height: 40px; 
-  width: 150px; 
+.buttonFilter,
+.clear-filter-button {
+  height: 40px;
+  width: 150px;
   margin: 0.5em;
   background-color: #356ec9;
-  border-radius: 8px; 
+  border-radius: 8px;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  line-height: 40px; 
-  color: white; 
-  font-size: 16px; 
-  font-weight: bold; 
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
-  transition: background-color 0.3s, transform 0.3s; 
+  line-height: 40px;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s, transform 0.3s;
 }
 
-.buttonFilter:hover, .clear-filter-button:hover {
-  background-color: #2851a3; 
-  transform: translateY(-2px); 
+.buttonFilter-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1em;
+}
+
+.buttonFilter:hover,
+.clear-filter-button:hover {
+  background-color: #2851a3;
+  transform: translateY(-2px);
 }
 
 .item-list-container {
