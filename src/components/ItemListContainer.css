@@ -1,14 +1,12 @@
 .container {
-  border-width: 1px 5px 1px 5px;
-  border-style: solid;
-  border-color: black;
+  border-top: 1px solid #fff;
   margin: 0;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  background-color: #0866ff;
-  min-height: 80vh;
+  background-color: #161617;
+  min-height: 85vh;
   max-width: 100%;
 }
 
@@ -45,8 +43,7 @@
   height: 40px;
   width: 150px;
   margin: 0.5em;
-  background-color: #356ec9;
-  border-radius: 8px;
+  border-radius: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -57,6 +54,8 @@
   font-weight: bold;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: background-color 0.3s, transform 0.3s;
+  background-color: transparent;
+  border: none;
 }
 
 .buttonFilter-container {
@@ -67,7 +66,7 @@
 
 .buttonFilter:hover,
 .clear-filter-button:hover {
-  background-color: #2851a3;
+  background-color: rgb(41, 151, 255);
   transform: translateY(-2px);
 }
 
