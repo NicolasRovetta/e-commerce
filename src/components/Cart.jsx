@@ -1,7 +1,13 @@
+import { useContext } from 'react'
+import ThemeContext from './themeContext'
+import './themeContext.css'
+import './Cart.css'
 
 function Cart() {
+  const {theme} = useContext(ThemeContext)
+
   return (
-    <div>futuro carrito</div>
+    <div className={`cart app ${theme}`}>futuro carrito</div>
   )
 }
 

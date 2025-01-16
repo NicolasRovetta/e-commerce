@@ -1,8 +1,12 @@
-
+import { useContext } from 'react'
+import ThemeContext from './themeContext'
+import './themeContext.css'
 
 function Home() {
+  const {theme} = useContext(ThemeContext)
+
   return (
-    <div className="homeNosotros">
+    <div className={`homeNosotros app ${theme}`}>
       <h2>iStore</h2>
       <p className="text">
         "Bienvenido a iStore, tu destino ideal para sumergirte en el ecosistema

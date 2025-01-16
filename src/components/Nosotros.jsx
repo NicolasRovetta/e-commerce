@@ -1,8 +1,11 @@
-
+import { useContext } from 'react'
+import ThemeContext from './themeContext'
+import './themeContext.css'
 
 function Nosotros() {
+  const {theme} = useContext(ThemeContext)
   return (
-    <div className="homeNosotros">
+    <div className={`homeNosotros app ${theme}`}>
       <h2>Nosotros: Más que una tienda, una experiencia Apple</h2>
       <p className="text">
           En iStore, te invitamos a sumergirte en el ecosistema Apple. No solo
