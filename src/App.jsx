@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Layout from "./components/Layout";
 import ItemListContainer from "./components/ItemListContainer";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
@@ -6,10 +7,24 @@ import Home from "./components/Home";
 import Cart from "./components/Cart";
 import Nosotros from "./components/Nosotros";
 import DetalleProducto from "./components/DetalleProducto";
+import ThemeContext from "./components/themeContext";
+import "./components/themeContext.css";
+import { FaSun, FaMoon } from "react-icons/fa"; // Asegúrate de tener instalada la librería react-icons
 
 function App() {
+     const [theme, setTheme] = useState('light'); 
+     
+     const toggleTheme = () => {
+      setTheme(theme === 'light' ? 'dark' : 'light');
+     }
+
   return (
     <>
+      <ThemeContext.Provider value={{theme, toggleTheme}}>
+      <div className={`app ${theme}`}>
+      <button className="buttonTheme" onClick={toggleTheme}>
+        {theme === 'light' ? <FaMoon /> : <FaSun />}
+      </button>
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Layout/>}>
@@ -22,6 +37,8 @@ function App() {
           <Route path="*" element={<Error/>} />
         </Routes>
       </BrowserRouter>
+      </div>
+      </ThemeContext.Provider>
     </>
   );
 }

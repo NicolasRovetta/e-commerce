@@ -2,9 +2,14 @@ import { useEffect, useState } from "react"
 import ItemList from "./ItemList"
 import { productos } from '../data/productos'
 import './ItemListContainer.css'
+import { useContext } from 'react'
+import ThemeContext from './themeContext'
+import './themeContext.css'
 
 function ItemListContainer() {
      const [items,setItems]=useState([])
+
+     const {theme} = useContext(ThemeContext) // consumo el contexto!!
 
      useEffect(()=>{
         const fetchProductos = new Promise((resolve)=> {    
@@ -19,7 +24,7 @@ function ItemListContainer() {
      }, []) // array de dependencias vacío para que se ejecute solo una vez
 
   return (
-    <div className='container'>     
+    <div className={`container app ${theme}`}>     
         <ItemList items={items}/>    
     </div>
   )
