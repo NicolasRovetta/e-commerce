@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 import ItemList from "./ItemList"
-import { productos } from '../data/productos'
+import { getFirestore, collection, getDocs } from 'firebase/firestore';
 import './ItemListContainer.css'
 import { useContext } from 'react'
 import ThemeContext from './themeContext'
@@ -11,16 +11,16 @@ function ItemListContainer() {
 
      const {theme} = useContext(ThemeContext) // consumo el contexto!!
 
-     useEffect(()=>{
-        const fetchProductos = new Promise((resolve)=> {    
-          setTimeout(() => {
-                resolve(productos)
-          }, 2000)  // retraso en mseg, de simulacion de peticion a API
-        })
+     useEffect(()=> {
+        const fetchProductos = async () => {
+            const db = getFirestore();
+            const productosCollection = collection(db, 'productos');
+            const productosSnapshot = await getDocs(productosCollection);
+            const productosList = productosSnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
+            setItems(productosList);
+        };
 
-        fetchProductos.then((data) => {
-           setItems(data)
-        })
+        fetchProductos();
      }, []) // array de dependencias vacío para que se ejecute solo una vez
 
   return (
