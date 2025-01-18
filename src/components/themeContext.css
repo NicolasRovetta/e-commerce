@@ -1,7 +1,7 @@
 .buttonTheme {
   float: right;
   font-size: 1.3em;
-  margin: 10px 10px 0 0;
+  margin: 10px 10px 0 0;  
 }
 
 .app .light {
@@ -12,7 +12,7 @@
     color: #f5f5f5;
   }
   .card {
-    background-color: #c5c5c5;
+    background-color: #c5c5c5;    
   }
 }
 

@@ -6,6 +6,7 @@ import { useState, useEffect } from 'react';
 function DetalleProducto() {
     const { id } = useParams();
     const [producto, setProducto] = useState(null);
+    const [loading, setLoading] = useState(true); // Estado para manejar la carga
 
     useEffect(() => {
         const fetchProducto = async () => {
@@ -17,10 +18,15 @@ function DetalleProducto() {
             } else {
                 setProducto(null);
             }
+            setLoading(false); 
         };
 
         fetchProducto();
     }, [id]);
+
+    if (loading) {
+        return <div>Cargando...</div>; 
+    }
 
     if (!producto) {
         return (
@@ -35,6 +41,8 @@ function DetalleProducto() {
             <h2>{producto.modelo}</h2>
             <p>{producto.descripcion}</p>
             <h3><strong>Precio: ${producto.precio}</strong></h3>
+            {/*<img src={producto.imagen} alt={producto.modelo} />*/}            
+            <button>Agregar al carrito</button>            
         </div>
     );
 }

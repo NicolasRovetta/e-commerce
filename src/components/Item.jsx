@@ -5,10 +5,9 @@ function Item({  categoria, modelo, precio, descripcion, id }) {
     <Link to={`/productos/${id}`} className="card">
       <div>{categoria}</div>
       <div><h3>{modelo}</h3></div>
-
-      {/* futuro llamado a la imagen del producto */}
-      
+      {/*<img src={producto.imagen} alt={producto.modelo} />*/}      
       <div><strong>Precio: ${precio}</strong></div>
+      <button >Agregar al carrito</button>
     </Link>
   );
 }
