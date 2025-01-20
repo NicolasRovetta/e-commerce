@@ -4,13 +4,19 @@ import { getFirestore, doc, getDoc } from "firebase/firestore";
 import { useState, useEffect } from "react";
 import { useContext } from 'react'
 import ThemeContext from './themeContext'
+import Swal from 'sweetalert2';
+
+const addProductCart = []; //array vacío para exportar los productos al carrito
 
 export const sendCart = (producto) => {
-  console.log('Producto a agregar:', producto); // Agregar este log para depuración
-  const cart = JSON.parse(localStorage.getItem('cart')) || []; // Obtener el carrito actual del localStorage    
-  cart.push(producto);  // Agregar el producto actual al carrito    
-  localStorage.setItem('cart', JSON.stringify(cart));// Guardar el carrito actualizado en el localStorage
-  alert('Producto agregado al carrito');
+  addProductCart.push(producto);  
+  console.log('Productos en el carrito:', addProductCart); // log para depuración
+  Swal.fire({
+    title: 'Producto agregado',
+    text: 'El producto ha sido agregado al carrito',
+    icon: 'success',
+    confirmButtonText: 'Aceptar'
+  });
 };
 
 function DetalleProducto() {
