@@ -1,3 +1,11 @@
+.buttonAdd {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px; 
+  width: 150px;
+}
+
 .container {
   margin: 0;
   display: flex;
@@ -10,7 +18,7 @@
 
 .container div {
   display: flex;
-  flex-direction: row;
+  align-items: center;
   flex-wrap: wrap;
   justify-content: space-evenly;
   width: 100%;
@@ -93,5 +101,12 @@
 }
 
 .detalleProducto {
-  margin-top: 20px;
+  position: relative;
+  top: 20px;
+  height: auto;
+  padding: 1em;
+}
+
+.backgroundDetalleProducto{
+  height: 80vh;
 }
