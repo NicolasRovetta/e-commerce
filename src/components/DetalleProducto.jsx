@@ -5,7 +5,7 @@ import { useState, useEffect, useContext } from "react";
 import ThemeContext from './themeContext';
 import Swal from 'sweetalert2';
 
-const addProductCart = [];
+export const addProductCart = [];
 
 export const sendCart = (producto, cantidad) => {
   addProductCart.push(...Array(cantidad).fill(producto));
