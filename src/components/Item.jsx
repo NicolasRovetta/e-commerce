@@ -1,8 +1,21 @@
 import { Link } from "react-router-dom";
-import { sendCart } from "./DetalleProducto";
+import { sendCart, counter } from "./DetalleProducto";
+import { useState } from "react";
 
 function Item({ categoria, modelo, precio, id }) {
   const producto = { categoria, modelo, precio, id };
+  const [cantidad, setCantidad] = useState(0);
+  const { increment, decrement, getCount } = counter(cantidad);
+
+  const handleIncrement = () => {
+    increment();
+    setCantidad(getCount());
+  };
+
+  const handleDecrement = () => {
+    decrement();
+    setCantidad(getCount());
+  };
 
   return (
     <div className="card">
@@ -16,7 +29,12 @@ function Item({ categoria, modelo, precio, id }) {
           <strong>Precio: ${precio}</strong>
         </div>
       </Link>
-      <button onClick={() => sendCart(producto)} className="buttonAdd">Agregar al carrito</button>    
+      <div>
+      <button onClick={handleDecrement}>-</button>
+      <span>{cantidad}</span>
+      <button onClick={handleIncrement}>+</button>
+      </div>
+      <button onClick={() => sendCart(producto, cantidad)} className="buttonAdd">Agregar al carrito</button>
     </div>
   );
 }

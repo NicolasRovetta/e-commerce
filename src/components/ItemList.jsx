@@ -45,6 +45,7 @@ function ItemList({ items }) {
       )}
       {filteredItems.map((item) => (
         <Item          
+          key={item.id}
           id={item.id} 
           nombre={item.nombre}
           categoria={item.categoria}
