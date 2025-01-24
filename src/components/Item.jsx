@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { sendCart, counter } from "./DetalleProducto";
 import { useState } from "react";
 
-function Item({ categoria, modelo, precio, id }) {
+function Item({ categoria, modelo, precio, id, image }) {
   const producto = { categoria, modelo, precio, id };
   const [cantidad, setCantidad] = useState(0);
   const { increment, decrement, getCount } = counter(cantidad);
@@ -24,7 +24,7 @@ function Item({ categoria, modelo, precio, id }) {
         <div>
           <h3>{modelo}</h3>
         </div>
-        {/*<img src={producto.imagen} alt={producto.modelo} />*/}
+        <img src={image} alt="imagen del producto" />
         <div>
           <strong>Precio: ${precio}</strong>
         </div>

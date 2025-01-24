@@ -54,7 +54,7 @@ function DetalleProducto() {
         <h2>{producto.modelo}</h2>
         <p>{producto.descripcion}</p>
         <h3><strong>Precio: ${producto.precio}</strong></h3>
-        {/*<img src={producto.imagen} alt={producto.modelo} />*/}
+        <img src={producto.image} alt="imagen producto" />
         <div className="counter">
         <button onClick={() => setCantidad(cantidad > 0 ? cantidad - 1 : 0)}>-</button>
         <span>{cantidad}</span>

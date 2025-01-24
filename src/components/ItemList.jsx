@@ -52,6 +52,7 @@ function ItemList({ items }) {
           modelo={item.modelo}
           precio={item.precio}
           descripcion={item.descripcion}
+          image={item.image}
         />
       ))}
     </div>
