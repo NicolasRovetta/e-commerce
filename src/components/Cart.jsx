@@ -69,7 +69,7 @@ function Cart() {
               <div>
                 <h3>{item.modelo}</h3>
               </div>
-              <img src={item.image} alt="imagen del producto" />
+              <img className="imgProduct" src={item.image} alt="imagen del producto" />
               <div>
                 <strong>Precio: ${item.precio}</strong>
               </div>

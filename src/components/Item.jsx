@@ -24,7 +24,7 @@ function Item({ categoria, modelo, precio, id, image }) {
         <div>
           <h3>{modelo}</h3>
         </div>
-        <img src={image} alt="imagen del producto" />
+        <img className="imgProduct" src={image} alt="imagen del producto" />
         <div>
           <strong>Precio: ${precio}</strong>
         </div>

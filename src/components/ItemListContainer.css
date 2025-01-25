@@ -100,13 +100,30 @@
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
 }
 
+.backgroundDetalleProducto{
+  display: flex;
+  flex-direction: column;
+  min-height: 80vh;
+}
+
 .detalleProducto {
-  position: relative;
-  top: 20px;
-  height: auto;
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  height: 20%;
   padding: 1em;
 }
 
-.backgroundDetalleProducto{
-  height: 80vh;
+.containerimg {
+  padding: 0;
+  display: flex;
+  width: 100%;
+  height: 15rem;
+  width: 15rem;
+  margin-left:30%;
+}
+
+.imgProductDetalles{
+  width: 100%;
+  height: 100%;
 }
