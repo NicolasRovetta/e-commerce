@@ -1,5 +1,5 @@
 import { useContext, useState, useEffect } from "react";
-import Swal from "sweetalert2"; // Asegúrate de importar Swal
+import Swal from "sweetalert2"; 
 import ThemeContext from "./themeContext";
 import "./themeContext.css";
 import "./cart.css";

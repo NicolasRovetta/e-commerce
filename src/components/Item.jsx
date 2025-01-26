@@ -3,7 +3,7 @@ import { sendCart, counter } from "./DetalleProducto";
 import { useState } from "react";
 
 function Item({ categoria, modelo, precio, id, image }) {
-  const producto = { categoria, modelo, precio, id };
+  const producto = { categoria, modelo, precio, id, image };
   const [cantidad, setCantidad] = useState(0);
   const { increment, decrement, getCount } = counter(cantidad);
 
@@ -15,6 +15,14 @@ function Item({ categoria, modelo, precio, id, image }) {
   const handleDecrement = () => {
     decrement();
     setCantidad(getCount());
+  };
+
+  const handleAddToCart = () => {
+    if (cantidad === 0) {
+      increment();
+      setCantidad(getCount());
+    }
+    sendCart(producto, getCount());
   };
 
   return (
@@ -30,11 +38,11 @@ function Item({ categoria, modelo, precio, id, image }) {
         </div>
       </Link>
       <div>
-      <button onClick={handleDecrement}>-</button>
-      <span>{cantidad}</span>
-      <button onClick={handleIncrement}>+</button>
+        <button onClick={handleDecrement}>-</button>
+        <span>{cantidad}</span>
+        <button onClick={handleIncrement}>+</button>
       </div>
-      <button onClick={() => sendCart(producto, cantidad)} className="buttonAdd">Agregar al carrito</button>
+      <button onClick={handleAddToCart} className="buttonAdd">Agregar al carrito</button>
     </div>
   );
 }
