@@ -19,10 +19,11 @@ function Item({ categoria, modelo, precio, id, image }) {
 
   const handleAddToCart = () => {
     if (cantidad === 0) {
-      increment();
-      setCantidad(getCount());
+      sendCart(producto, 1);
+    } else {
+      sendCart(producto, getCount());
     }
-    sendCart(producto, getCount());
+    setCantidad(0); // Resetear la cantidad a 0 después de agregar al carrito
   };
 
   return (
