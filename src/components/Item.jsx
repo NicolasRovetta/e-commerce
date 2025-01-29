@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { sendCart } from "./DetalleProducto";
-import { useState } from "react";
+import React, { useState } from "react"; 
 
 function Item({ categoria, modelo, precio, id, image }) {
   const producto = { categoria, modelo, precio, id, image };
