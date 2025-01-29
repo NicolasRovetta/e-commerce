@@ -21,7 +21,7 @@ export const sendCart = (producto, cantidad) => {
 export const counter = (initialValue = 0) => {
   let count = initialValue;
   return {
-    increment: () => count < 5 && count++,
+    increment: () => count < 5 && count++ && {cantidad}==0,
     decrement: () => count > 0 && count--,
     getCount: () => count,
   };
@@ -69,15 +69,18 @@ function DetalleProducto() {
           <img className="imgProductDetalles" src={producto.image} alt="imagen producto" />
         </div>
         <div className="counter">
-          <button onClick={() => setCantidad(cantidad > 0 ? cantidad - 1 : 0)}>
+          <button className="botonIncDec" onClick={() => setCantidad(cantidad > 0 ? cantidad - 1 : 0)}>
             -
           </button>
           <span>{cantidad}</span>
-          <button onClick={() => setCantidad(cantidad < 5 ? cantidad + 1 : 5)}>
+          <button className="botonIncDec" onClick={() => setCantidad(cantidad < 5 ? cantidad + 1 : 5)}>
             +
           </button>
         </div>
-        <button onClick={() => sendCart(producto, cantidad)}>
+        <button onClick={() => {
+          sendCart(producto, cantidad);
+          setCantidad(0);
+        }}>
           Agregar al carrito
         </button>
       </div>

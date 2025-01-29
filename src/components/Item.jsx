@@ -39,9 +39,9 @@ function Item({ categoria, modelo, precio, id, image }) {
         </div>
       </Link>
       <div>
-        <button onClick={handleDecrement}>-</button>
+        <button className="botonIncDec" onClick={handleDecrement}>-</button>
         <span>{cantidad}</span>
-        <button onClick={handleIncrement}>+</button>
+        <button className="botonIncDec" onClick={handleIncrement}>+</button>
       </div>
       <button onClick={handleAddToCart} className="buttonAdd">Agregar al carrito</button>
     </div>

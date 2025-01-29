@@ -53,7 +53,8 @@ function Cart() {
   return (
     <div className={`containerCart app ${theme}`}>
       <div className="cart">
-        <h2>Carrito</h2>
+      {cartItems.length === 0 ? <h2>Carrito vacío</h2> : <h2>Carrito</h2>}          
+        
         <button type="reset" onClick={clearCart}>
           Vaciar carrito
         </button>
@@ -75,6 +76,9 @@ function Cart() {
               </div>
               <div>
                 <strong>Cantidad: {item.count}</strong>
+              </div>
+              <div>
+                <strong>Sub total: ${item.precio * item.count}</strong>
               </div>
             </li>
           ))}
