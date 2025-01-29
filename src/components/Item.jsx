@@ -1,6 +1,26 @@
 import { Link } from "react-router-dom";
-import { sendCart, counter } from "./DetalleProducto";
+import { sendCart } from "./DetalleProducto";
 import { useState } from "react";
+
+function counter(initialCount) {
+  let count = initialCount;
+
+  const increment = () => {
+    if (count < 5) {
+      count += 1;
+    }
+  };
+
+  const decrement = () => {
+    if (count > 0) {
+      count -= 1;
+    }
+  };
+
+  const getCount = () => count;
+
+  return { increment, decrement, getCount };
+}
 
 function Item({ categoria, modelo, precio, id, image }) {
   const producto = { categoria, modelo, precio, id, image };
@@ -23,7 +43,7 @@ function Item({ categoria, modelo, precio, id, image }) {
     } else {
       sendCart(producto, getCount());
     }
-    setCantidad(0); // Resetear la cantidad a 0 después de agregar al carrito
+    setCantidad(0); 
   };
 
   return (
