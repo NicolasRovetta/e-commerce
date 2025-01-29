@@ -4,16 +4,16 @@ import { useState } from "react";
 
 function Item({ categoria, modelo, precio, id, image }) {
   const producto = { categoria, modelo, precio, id, image };
-  const [cantidad, setCantidad] = useState(0);
-
+  const [cantidad, setCantidad] = useState(0); // Definimos el estado cantidad
+  
   const handleIncrement = () => {
     setCantidad((prevCantidad) => (prevCantidad < 5 ? prevCantidad + 1 : prevCantidad));
   };
-
+  
   const handleDecrement = () => {
     setCantidad((prevCantidad) => (prevCantidad > 0 ? prevCantidad - 1 : prevCantidad));
   };
-
+  
   const handleAddToCart = () => {
     if (cantidad === 0) {
       sendCart(producto, 1);
