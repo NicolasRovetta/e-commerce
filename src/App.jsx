@@ -9,7 +9,7 @@ import Nosotros from "./components/Nosotros";
 import DetalleProducto from "./components/DetalleProducto";
 import ThemeContext from "./components/themeContext";
 import "./components/themeContext.css";
-import { FaSun, FaMoon } from "react-icons/fa"; // Asegúrate de tener instalada la librería react-icons
+import { FaSun, FaMoon } from "react-icons/fa"; 
 
 function App() {
      const [theme, setTheme] = useState('light'); 
