@@ -1,4 +1,3 @@
-
 * {  
   box-sizing: border-box;
   margin: 0;
@@ -126,4 +125,69 @@ button:hover {
   height: 50px;
   z-index: 1000;
   cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .detalleProducto {
+    margin: 0 50px;
+    padding: 0 20px;
+  }
+
+  .text {
+    padding: 0 50px;
+  }
+
+  .homeNosotros {
+    height: auto;
+    padding: 20px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .detalleProducto {
+    margin: 0 20px;
+    padding: 0 10px;
+  }
+
+  .text {
+    padding: 0 20px;
+  }
+
+  button {
+    padding: 5px 10px;
+  }
+
+  .wp-logo {
+    width: 40px;
+    height: 40px;
+  }
+
+  .homeNosotros {
+    height: auto;
+    padding: 10px 0;
+  }
+}
+
+@media (min-width: 1200px) {
+  .detalleProducto {
+    margin: 0 300px;
+    padding: 0 150px;
+  }
+
+  .text {
+    padding: 0 300px;
+  }
+
+  .homeNosotros {
+    padding: 50px 0;
+  }
+
+  button {
+    padding: 15px 30px;
+  }
+
+  .wp-logo {
+    width: 60px;
+    height: 60px;
+  }
 }
