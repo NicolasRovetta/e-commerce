@@ -24,10 +24,10 @@ jobs:
       - name: Build project
         run: npm run build
         env:
-          VITE_apiKey: ${{ secrets.VITE_apiKey }}
+          VITE_API_KEY: ${{ secrets.VITE_API_KEY }}
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./build
+          publish_dir: ./dist
