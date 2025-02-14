@@ -1,10 +1,10 @@
-import {createRoot} from 'react-dom/client'
-import './index.css'
+import { createRoot } from 'react-dom/client';
+import './index.css';
 import App from './App.jsx';
 import { initializeApp } from "firebase/app";
 
 const firebaseConfig = {
-  apiKey: import.meta.env.VITE_apiKey,
+  apiKey: "AIzaSyAYSAlgzFGUr3pyuzHijKoZRrorOgRVK9M", //import.meta.env.VITE_apiKey
   authDomain: "ie-commerce.firebaseapp.com",
   projectId: "ie-commerce",
   storageBucket: "ie-commerce.firebasestorage.app",
@@ -18,4 +18,4 @@ createRoot(document.getElementById('root')).render(
   <>
     <App />
   </>,
-)
+);
