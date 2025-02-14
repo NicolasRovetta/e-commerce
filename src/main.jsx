@@ -4,7 +4,7 @@ import App from './App.jsx';
 import { initializeApp } from "firebase/app";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyAYSAlgzFGUr3pyuzHijKoZRrorOgRVK9M",
+  apiKey: import.meta.env.VITE_apiKey,
   authDomain: "ie-commerce.firebaseapp.com",
   projectId: "ie-commerce",
   storageBucket: "ie-commerce.firebasestorage.app",
