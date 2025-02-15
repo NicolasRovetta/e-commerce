@@ -18,6 +18,8 @@ function App() {
       setTheme(theme === 'light' ? 'dark' : 'light');
      }
 
+     const basename = process.env.NODE_ENV === 'production' ? '/e-commerce' : '/';
+
   return (
     <>
       <ThemeContext.Provider value={{theme, toggleTheme}}>
@@ -25,7 +27,7 @@ function App() {
       <button className="buttonTheme" onClick={toggleTheme}>
         {theme === 'light' ? <FaMoon /> : <FaSun />}
       </button>
-      <BrowserRouter>
+      <BrowserRouter basename={basename}>
         <Routes>
           <Route path="/" element={<Layout/>}>
             <Route index element={<Home/>} />

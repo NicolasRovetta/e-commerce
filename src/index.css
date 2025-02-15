@@ -127,7 +127,7 @@ button:hover {
   cursor: pointer;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 768px) {      
   .detalleProducto {
     margin: 0 50px;
     padding: 0 20px;
@@ -144,7 +144,7 @@ button:hover {
 }
 
 @media (max-width: 480px) {
-  .detalleProducto {
+   .detalleProducto {
     margin: 0 20px;
     padding: 0 10px;
   }
