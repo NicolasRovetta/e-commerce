@@ -11,10 +11,8 @@ function Layout() {
       <nav>
         <ul>
           <li>
-            <div className="logo">
-              <Link to="/"> 
-                <img src={LogoW} alt="Logo" /> 
-              </Link>
+            <div className="logo">               
+                <img src={LogoW} alt="Logo" />              
             </div>
           </li>
           <li>

@@ -127,7 +127,18 @@ button:hover {
   cursor: pointer;
 }
 
+.logo a:hover {
+  background-color: inherit;
+}
+
 @media (max-width: 768px) {      
+
+  ul{
+    flex-direction: row !important;
+    width: 100%;
+    height: auto;
+  }
+
   .detalleProducto {
     margin: 0 50px;
     padding: 0 20px;
