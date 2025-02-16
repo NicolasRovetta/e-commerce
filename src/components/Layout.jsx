@@ -4,18 +4,24 @@ import CartWidget from "./CartWidget";
 import { Link, Outlet } from "react-router-dom";
 import React from 'react';
 import logoWp from "../assets/logoWp.png";
+import { useContext } from 'react';
+import ThemeContext from './themeContext';
+import './themeContext.css';
 
 function Layout() {
+  const {theme} = useContext(ThemeContext) //
+
   return (
     <>
-      <nav>
+      <nav className={` ${theme}`}>
         <ul>
           <li>
-            <div className="logo">               
+            <div className="logo">                           
                 <img src={LogoW} alt="Logo" />              
             </div>
           </li>
           <li>
+          <pixel-canvas></pixel-canvas>
             <Link to="/">Inicio</Link>
           </li>
           <li>

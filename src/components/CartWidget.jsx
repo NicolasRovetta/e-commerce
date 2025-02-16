@@ -17,7 +17,7 @@ function CartWidget() {
     <>
       <div className="cartPosition">
         <img src={cart} alt="logoCart" className='logoCart'/>
-        <div>carrito ({cartCount})</div>
+        <div>Carrito ({cartCount})</div>
       </div>
     </>
   );
