@@ -17,7 +17,7 @@ function Layout() {
         <ul>
           <li>
             <div className="logo">                           
-                <img src={LogoW} alt="Logo" />              
+                <img src={LogoW} alt="Logo" className="white-logo" />              
             </div>
           </li>
           <li>

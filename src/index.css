@@ -170,6 +170,13 @@ button {
     height: auto;
     padding: 10px 0;
   }
+
+  .buttonFilter--primary{
+    width: 50% !important;
+  }
+  .card{
+    max-width: 80% !important;
+  }
 }
 
 @media (min-width: 1200px) {

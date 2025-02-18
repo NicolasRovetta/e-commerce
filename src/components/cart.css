@@ -98,3 +98,10 @@
   align-items: center;
   justify-content: center;
 }
+
+@media (max-width: 768px) {
+  .containerCart .card {
+    max-width: 80%;
+    margin: auto;
+  }
+}

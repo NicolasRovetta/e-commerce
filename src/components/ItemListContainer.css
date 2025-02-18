@@ -129,8 +129,15 @@
 }
 
 .botonIncDec{
-  font-size: 0.8rem;
-  margin-bottom: 0.2em;
+  font-size: 0.8em;
+  margin-bottom: 0.3em;
+  margin-right: 6px;
+  margin-left: 6px;
+}
+.buttonAdd{
+  max-width: 80%;
+  max-height: fit-content;
+  border-radius: 10px
 }
 
 @media (max-width: 768px) {
@@ -185,5 +192,16 @@
   .imgProductDetalles {
     display: block;
     margin: 0 auto;
+  }
+  .botonIncDec{
+    font-size: 0.8em;
+    margin-bottom: 0.3em;
+    margin-right: 6px;
+    margin-left: 6px;
+  }
+  .buttonAdd{
+    max-width: 80%;
+    max-height: fit-content;
+    border-radius: 10px
   }
 }
