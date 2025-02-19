@@ -32,7 +32,9 @@
 .app .dark {  
   background: linear-gradient(to bottom, #333333, #1a1a1a);
   background-color: #333;
-    
+  .formulario{
+    color: #f5f5f5;
+  }
   .white-logo {
     filter: brightness(0) invert(1);
   }  
@@ -43,12 +45,6 @@
     background-color: #f5f5f586;
     color: #333;
   }
-}
-
-.app.dark {
-  background: linear-gradient(to bottom, #333333, #1a1a1a);
-  background-color: #333;
-  color: #f5f5f5;
 }
 
 .app.dark nav ul {
@@ -62,4 +58,12 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
+}
+
+.footer {
+  padding: 1em;
+  text-align: center;
+  background-color: inherit;
+  color: inherit;
+  border-top: 1px solid #ccc;
 }

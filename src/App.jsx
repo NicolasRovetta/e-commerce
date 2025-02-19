@@ -10,6 +10,7 @@ import DetalleProducto from "./components/DetalleProducto";
 import ThemeContext from "./components/themeContext";
 import "./components/themeContext.css";
 import { FaSun, FaMoon } from "react-icons/fa"; 
+import Footer from './components/Footer';
 
 function App() {
      const [theme, setTheme] = useState('light'); 
@@ -38,6 +39,7 @@ function App() {
           </Route>
           <Route path="*" element={<Error/>} />
         </Routes>
+        <Footer />
       </BrowserRouter>
       </div>
       </ThemeContext.Provider>

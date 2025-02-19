@@ -128,11 +128,12 @@ button:hover {
 }
 
 @media (max-width: 768px) {  
-  nav{
+  nav ul {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    }
+    flex-direction: row !important;  
+    justify-content: space-around;
+  }
+
   .detalleProducto {
     margin: 0 50px;
     padding: 0 20px;
@@ -149,7 +150,12 @@ button:hover {
 }
 
 @media (max-width: 480px) {
-   .detalleProducto {
+  nav ul {
+    display: flex;
+    flex-direction: row !important;    
+  }
+
+  .detalleProducto {
     margin: 0 20px;
     padding: 0 10px;
   }

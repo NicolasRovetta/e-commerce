@@ -78,6 +78,7 @@
 }
 
 .formulario form input {
+  background: linear-gradient(to bottom, #6d6d6d, #1a1a1a00);
   padding: 0.5rem;
   border: 1px solid #ccc;
   border-radius: 5px;
