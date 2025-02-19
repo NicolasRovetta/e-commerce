@@ -1,3 +1,7 @@
+.buy{
+  max-width: 50%;
+}
+
 .containerCart{
   display: flex;
   flex-direction: row;
@@ -81,7 +85,7 @@
   background: linear-gradient(to bottom, #6d6d6d, #1a1a1a00);
   padding: 0.5rem;
   border: 1px solid #ccc;
-  border-radius: 5px;
+  border-radius: 35px;
   width: 100%;
 }
 
@@ -91,8 +95,7 @@
   height: 2rem;
   margin: 0.5rem 0;
   padding: 0.5rem;
-  border-radius: 5px;
-  width: 100%;
+  border-radius: 35px;
   border: 2px solid #000;
   background-color: rgb(206, 0, 45) !important;
   display: flex;
@@ -104,5 +107,19 @@
   .containerCart .card {
     max-width: 80%;
     margin: auto;
+  }
+  .formulario form button {
+    font: 500 1rem 'Roboto', sans-serif;
+    font-size: small;
+    height: 2rem;
+    margin: 0.5rem 0;
+    padding: 0.5rem;
+    border-radius: 35px;
+    border: 2px solid #000;
+    background-color: rgb(206, 0, 45) !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 80%;
   }
 }

@@ -86,6 +86,7 @@ function Cart() {
       </div>
       <div className="formulario">
         <form onSubmit={handlePurchase}>
+          <h2>Finalizar Compra</h2>
           <div>
             <label>Nombre y apellido:</label>
             <input type="text" name="nombre y apellido" required />
@@ -110,7 +111,7 @@ function Cart() {
             <label>CVV:</label>
             <input type="text" name="cvv" required />
           </div>
-          <button type="submit">Finalizar Compra</button>
+          <button type="submit" className="buy">Realizar pago</button>
         </form>
       </div>
     </div>
