@@ -49,7 +49,7 @@ function DetalleProducto() {
     fetchProducto();
   }, [id]);
 
-  if (loading) return <div>Cargando...</div>;
+  if (loading) return <div className="loadingScreen">Cargando...</div>;
   if (!producto)
     return (
       <div className="errorFullScreen">

@@ -11,7 +11,7 @@ body {
   flex-wrap: wrap;
   width: 100%;
   height: auto;
-  background-color: #f0f4f8;
+  background: linear-gradient(to bottom, #ffffff, #f2f2f2, #e6e6e6, #d9d9d9);
   color: #333;
 }
 
@@ -22,20 +22,13 @@ body {
 }
 
 .detalleProducto {
-  display: flex;
-  margin: 0 200px;
+  margin: 0 250px;
   padding: 0 100px;
   background-color: #f0f8ff80;
   border-radius: 10px;
-  border: 1px solid #333;
   text-align: center;
-  width: auto;
 }
-.detalleProducto .containerimg{
-  height: 30vh;
-  width: 35vh;
-  margin: 0 auto;
-}
+
 .error-container {
   width: 100vw;
   height: 100vh;
@@ -111,10 +104,17 @@ a:hover {
 button {
   background-color: transparent;
   border: none;
+  color: #1d4ed8;
   padding: 10px 20px;
   border-radius: 12px;
   cursor: pointer;
   transition: background-color 0.3s, transform 0.3s;
+}
+
+button:hover {
+  background-color: rgb(41, 151, 255);
+  color: white;
+  transform: translateY(-2px);
 }
 
 .wp-logo {
@@ -127,25 +127,17 @@ button {
   cursor: pointer;
 }
 
-.logo a:hover {
-  background-color: inherit;
-}
-
-@media (max-width: 768px) {      
-
-  ul{
-    flex-direction: row !important;
-    width: 100%;
-    height: auto;
-  }
-
+@media (max-width: 768px) {  
+  nav{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    }
   .detalleProducto {
     margin: 0 50px;
     padding: 0 20px;
   }
-  .detalleProducto .containerimg{
-    width: auto;
-  }
+
   .text {
     padding: 0 50px;
   }
@@ -178,13 +170,6 @@ button {
   .homeNosotros {
     height: auto;
     padding: 10px 0;
-  }
-
-  .buttonFilter--primary{
-    width: 50% !important;
-  }
-  .card{
-    max-width: 80% !important;
   }
 }
 

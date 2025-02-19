@@ -8,7 +8,7 @@ function CartWidget() {
   useEffect(() => {
     const interval = setInterval(() => {
       setCartCount(addProductCart.length);
-    }, 1000);
+    }, 0);
 
     return () => clearInterval(interval);
   }, []);
