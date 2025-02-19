@@ -203,4 +203,23 @@
     max-height: fit-content;
     border-radius: 10px
   }
+  .card{
+    max-width: 80%;
+  }
+  .buttonFilter--primary{
+    display: flex;
+    width: 50%;
+    height: 40px;
+    margin: 0.5em;
+    border-radius: 12px; 
+    margin-right: auto;
+  }
+  .buttonFilter--secondary{
+    display: flex;
+    width: 50%;
+    height: 40px;
+    margin: 0.1em;
+    border-radius: 10px; 
+    margin-right: center;
+  }
 }

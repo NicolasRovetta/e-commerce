@@ -21,24 +21,24 @@ function ItemList({ items }) {
       {showFilters && (
         <div>
           <button
-            className="buttonFilter"
+            className="buttonFilter buttonFilter--secondary"
             onClick={() => setSelectedCategory("MacBook")}
           >
             MacBook
           </button>
           <button
-            className="buttonFilter"
+            className="buttonFilter buttonFilter--secondary"
             onClick={() => setSelectedCategory("iPhone")}
           >
             iPhone
           </button>
           <button
-            className="buttonFilter"
+            className="buttonFilter buttonFilter--secondary"
             onClick={() => setSelectedCategory("Accesorio")}
           >
             Accesorio
           </button>
-          <button className="clear-filter-button" onClick={handleClearFilter}>
+          <button className="clear-filter-button buttonFilter--secondary" onClick={handleClearFilter}>
             Quitar filtro
           </button>
         </div>
