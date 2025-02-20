@@ -78,7 +78,12 @@ function DetalleProducto() {
           </button>
         </div>
         <button onClick={() => {
-          sendCart(producto, cantidad);
+          if (cantidad === 0) {
+            setCantidad(1);
+            sendCart(producto, 1);
+          } else {
+            sendCart(producto, cantidad);
+          }
           setCantidad(0);
         }}>
           Agregar al carrito
