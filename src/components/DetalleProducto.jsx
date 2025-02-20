@@ -4,6 +4,7 @@ import { getFirestore, doc, getDoc } from "firebase/firestore";
 import { useState, useEffect, useContext } from "react";
 import ThemeContext from "./themeContext";
 import Swal from "sweetalert2";
+import Contador from "./Contador"; // Importar el nuevo componente Contador
 
 export const addProductCart = [];
 
@@ -49,6 +50,20 @@ function DetalleProducto() {
     fetchProducto();
   }, [id]);
 
+  const handleAddToCart = () => {
+    if (cantidad === 0) {
+      Swal.fire({
+        title: "Cantidad inválida",
+        text: "Debe agregar al menos un producto al carrito",
+        icon: "error",
+        confirmButtonText: "Aceptar",
+      });
+      return;
+    }
+    sendCart(producto, cantidad);
+    setCantidad(0);
+  };
+
   if (loading) return <div className="loadingScreen">Cargando...</div>;
   if (!producto)
     return (
@@ -68,24 +83,8 @@ function DetalleProducto() {
         <div className="containerimg">
           <img className="imgProductDetalles" src={producto.image} alt="imagen producto" />
         </div>
-        <div className="counter">
-          <button className="botonIncDec" onClick={() => setCantidad(cantidad > 0 ? cantidad - 1 : 0)}>
-            -
-          </button>
-          <span>{cantidad}</span>
-          <button className="botonIncDec" onClick={() => setCantidad(cantidad < 5 ? cantidad + 1 : 5)}>
-            +
-          </button>
-        </div>
-        <button onClick={() => {
-          if (cantidad === 0) {
-            setCantidad(1);
-            sendCart(producto, 1);
-          } else {
-            sendCart(producto, cantidad);
-          }
-          setCantidad(0);
-        }}>
+        <Contador cantidad={cantidad} setCantidad={setCantidad} />
+        <button onClick={handleAddToCart}>
           Agregar al carrito
         </button>
       </div>

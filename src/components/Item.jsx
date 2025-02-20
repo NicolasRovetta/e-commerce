@@ -1,30 +1,31 @@
 import { Link } from "react-router-dom";
 import { sendCart } from "./DetalleProducto";
-import React, { useState } from "react"; 
+import React, { useState, useContext } from "react";
+import ThemeContext from "./themeContext";
+import Swal from "sweetalert2";
+import Contador from "./Contador"; 
 
 function Item({ categoria, modelo, precio, id, image }) {
   const producto = { categoria, modelo, precio, id, image };
+  const { theme } = useContext(ThemeContext);
   const [cantidad, setCantidad] = useState(0); // Definimos el estado cantidad
-  
-  const handleIncrement = () => {
-    setCantidad((prevCantidad) => (prevCantidad < 5 ? prevCantidad + 1 : prevCantidad));
-  };
-  
-  const handleDecrement = () => {
-    setCantidad((prevCantidad) => (prevCantidad > 0 ? prevCantidad - 1 : prevCantidad));
-  };
-  
+
   const handleAddToCart = () => {
     if (cantidad === 0) {
-      sendCart(producto, 1);
-    } else {
-      sendCart(producto, cantidad);
+      Swal.fire({
+        title: "Cantidad inválida",
+        text: "Debe agregar al menos un producto al carrito",
+        icon: "error",
+        confirmButtonText: "Aceptar",
+      });
+      return;
     }
-    setCantidad(0); 
+    sendCart(producto, cantidad);
+    setCantidad(0);
   };
 
   return (
-    <div className="card">
+    <div className={`card ${theme}`}>
       <Link to={`/productos/${id}`}>
         <div>{categoria}</div>
         <div>
@@ -35,11 +36,7 @@ function Item({ categoria, modelo, precio, id, image }) {
           <strong>Precio: ${precio}</strong>
         </div>
       </Link>
-      <div>
-        <button className="botonIncDec" onClick={handleDecrement}>-</button>
-        <span>{cantidad}</span>
-        <button className="botonIncDec" onClick={handleIncrement}>+</button>
-      </div>
+      <Contador cantidad={cantidad} setCantidad={setCantidad} />
       <button onClick={handleAddToCart} className="buttonAdd">Agregar al carrito</button>
     </div>
   );
