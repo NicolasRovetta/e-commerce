@@ -5,7 +5,7 @@ import ThemeContext from "./themeContext";
 import Swal from "sweetalert2";
 import Contador from "./Contador"; 
 
-function Item({ categoria, modelo, precio, id, image }) {
+function Item({ categoria, modelo, precio, id, image, descripcion }) {
   const producto = { categoria, modelo, precio, id, image };
   const { theme } = useContext(ThemeContext);
   const [cantidad, setCantidad] = useState(0); // Definimos el estado cantidad
