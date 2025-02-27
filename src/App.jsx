@@ -11,13 +11,21 @@ import ThemeContext from "./components/themeContext";
 import "./components/themeContext.css";
 import { FaSun, FaMoon } from "react-icons/fa"; 
 import Footer from './components/Footer';
+import AuthForm from "./components/AuthForm";
+import ItemList from "./components/ItemList";
 
 function App() {
      const [theme, setTheme] = useState('light'); 
-     
+     const [isAuthenticated, setIsAuthenticated] = useState(false);
+
      const toggleTheme = () => {
       setTheme(theme === 'light' ? 'dark' : 'light');
      }
+
+     const handleLogin = (email, password) => {
+      // Lógica de autenticación aquí
+      setIsAuthenticated(true);
+     };
 
      const basename = process.env.NODE_ENV === 'production' ? '/e-commerce' : '/';
 
@@ -38,9 +46,15 @@ function App() {
             <Route path="cart" element={<Cart/>} />            
           </Route>
           <Route path="*" element={<Error/>} />
-        </Routes>        
+        </Routes>
       </BrowserRouter>
       <Footer />
+      {!isAuthenticated && (
+        <>
+          <div className="blur-background"></div>
+          <AuthForm onLogin={handleLogin} />
+        </>
+      )}
       </div>
       </ThemeContext.Provider>
     </>

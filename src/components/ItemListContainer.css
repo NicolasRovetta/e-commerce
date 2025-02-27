@@ -223,3 +223,18 @@
     margin-right: center;
   }
 }
+
+
+.buttonFilter--primary{
+  background-color: rgba(128, 128, 128, 0.342)!important;
+  display: flex;
+  width: 10%;
+  height: 1rem;
+  margin: 0.5em;
+  border-radius: 18px; 
+  margin-right: auto;
+}
+.filterIcon{
+  height: 1.8em;
+  width: 2.8em;
+}

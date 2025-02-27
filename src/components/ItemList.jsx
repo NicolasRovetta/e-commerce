@@ -1,5 +1,6 @@
 import Item from "./Item";
 import { useState } from "react";
+import filterIcon from "../assets/filter.png"; // Ajusta la ruta según la ubicación de tu imagen
 
 function ItemList({ items }) {
   const [selectedCategory, setSelectedCategory] = useState("");
@@ -16,7 +17,7 @@ function ItemList({ items }) {
       <div style={{ display: "flex", justifyContent: "center", marginBottom: "1em" }}>
         <button
           className="buttonFilter buttonFilter--primary"
-          onClick={() => setShowFilters(!showFilters)}>Filtrar</button>
+          onClick={() => setShowFilters(!showFilters)}><img src={filterIcon} className="filterIcon" alt="Filter" /></button>
       </div>
       {showFilters && (
         <div>
