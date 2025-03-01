@@ -8,18 +8,17 @@ import Cart from "./components/Cart";
 import Nosotros from "./components/Nosotros";
 import DetalleProducto from "./components/DetalleProducto";
 import ThemeContext from "./components/themeContext";
-import "./components/themeContext.css";
+import "./index.css"; // Asegúrate de importar el archivo CSS correcto
 import { FaSun, FaMoon } from "react-icons/fa"; 
 import Footer from './components/Footer';
 import AuthForm from "./components/AuthForm";
-import ItemList from "./components/ItemList";
 
 function App() {
-     const [theme, setTheme] = useState('light'); 
+     const [theme, setTheme] = useState('light'); // Establecer el tema claro como predeterminado
      const [isAuthenticated, setIsAuthenticated] = useState(false);
 
      const toggleTheme = () => {
-      setTheme(theme === 'light' ? 'dark' : 'light');
+      setTheme(theme === 'light' ? 'dark' : 'light'); // Permitir cambiar entre temas
      }
 
      const handleLogin = (email, password) => {

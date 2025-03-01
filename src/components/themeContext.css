@@ -1,3 +1,15 @@
+.app {
+  background: linear-gradient(to bottom, #ffffff, #e6e6e6);
+  background-color: #ffffff;
+  color: #333;
+}
+
+.app.dark {
+  background: linear-gradient(to bottom, #333333, #1a1a1a);
+  background-color: #333;
+  color: #f5f5f5;
+}
+
 .buttonTheme {
   display: flex;
   position: absolute;
@@ -11,42 +23,30 @@
   z-index: 10;
 }
 
-.buttonTheme:hover {
-  background-color:RGB(255, 240, 192);
-  color: white;
-}
-
-.app .light {
-  background: linear-gradient(to bottom, #ffffff, #e6e6e6);
-  background-color: white;
+button {
+  background-color: #f5f5f5;
   color: #333;
-  button {
-    background-color: #333;
-    color: #f5f5f5;
-  }
-  .card {
-    background-color: #c5c5c5;    
-  }  
 }
 
-.app .dark {  
-  background: linear-gradient(to bottom, #333333, #1a1a1a);
-  background-color: #333;
+.white-logo {
+  filter: brightness(0) invert(1);
+}
+
+h2, h3, h4, p, a {
+  color: #333;
+}
+
+.app.dark h2, .app.dark h3, .app.dark h4, .app.dark p, .app.dark a {
   color: #f5f5f5;
-  button {
-    background-color: #f5f5f5;
-    color: #333;
-  }
-  .white-logo {
-    filter: brightness(0) invert(1);
-  }  
-  h2,h3,h4, p, a{
-    color: #f5f5f5;
-  }
-  button {
-    background-color: #f5f5f586;
-    color: #333;
-  }
+}
+
+button {
+  background-color: #f5f5f586;
+  color: #333;
+}
+
+.app nav ul {
+  border-bottom: 1px solid #333;
 }
 
 .app.dark nav ul {

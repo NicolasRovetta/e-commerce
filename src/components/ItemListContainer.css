@@ -25,6 +25,7 @@
 }
 
 .card {
+  border:1px solid #000;
   align-content: center;
   margin: 0.5em;
   display: flex;
@@ -38,6 +39,9 @@
   border-radius: 15px;
   padding: 1em;
   min-height: auto;
+}
+.card button {
+  background-color: #000;
 }
 .card div {
   margin-bottom: 0.05em;
@@ -69,11 +73,7 @@
   margin-bottom: 1em;
 }
 
-.buttonFilter:hover,
-.clear-filter-button:hover {
-  background-color: rgb(41, 151, 255);
-  transform: translateY(-2px);
-}
+
 
 .item-list-container {
   display: flex;
