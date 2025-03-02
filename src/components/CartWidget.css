@@ -1,0 +1,10 @@
+.cartPosition {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+.logoCart {
+    height: 2em;
+    width: 2em;
+  }

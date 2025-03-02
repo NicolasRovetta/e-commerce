@@ -14,12 +14,6 @@ body {
   color: #f5f5f5; 
 }
 
-.cartPosition {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
 .detalleProducto {
   margin: 0 250px;
   padding: 0 100px;
@@ -28,46 +22,28 @@ body {
   text-align: center;
 }
 
-.logoCart {
-  height: 2em;
-  width: 2em;
-}
-
 h2 {
-  color: #f5f5f5; /* Ajustar el color del texto al tema oscuro */
+  color: #f5f5f5; 
   margin: 0;
   text-align: center;
 }
 
-.errorFullScreen {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: white;
-}
-
 h1,h2,h3,h4,h5,h6 {
-  color:  #f5f5f5; /* Ajustar el color del texto al tema oscuro */
+  color:  #f5f5f5; 
   margin-bottom: 20px;
 }
 
 p {
-  color: #f5f5f5; /* Ajustar el color del texto al tema oscuro */
+  color: #f5f5f5; 
   margin-bottom: 20px;
   line-height: 1.6;
 }
 
 a {
-  color: #f5f5f5; /* Ajustar el color del texto al tema oscuro */
+  color: #f5f5f5; 
   text-decoration: none;
   transition: color 0.3s;
 }
-
 a:hover {
   color: #00000080;
 }
@@ -81,7 +57,6 @@ button {
   cursor: pointer;
   transition: background-color 0.3s, transform 0.3s;
 }
-
 button:hover {
   background-color: rgb(41, 151, 255);
   color: white;
@@ -97,6 +72,7 @@ button:hover {
   z-index: 1000;
   cursor: pointer;
 }
+/*-----------------MEDIAS QUERIES---------------*/
 
 @media (min-width: 1200px) {
   .detalleProducto {
@@ -111,7 +87,6 @@ button:hover {
     height: 60px;
   }
 }
-
 @media (max-width: 768px) {  
   nav ul {
     display: flex;
@@ -123,7 +98,6 @@ button:hover {
     padding: 0 20px;
   }
 }
-
 @media (max-width: 480px) {
   nav ul {
     display: flex;

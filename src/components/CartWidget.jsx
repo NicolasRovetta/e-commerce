@@ -1,6 +1,7 @@
 import cart from '../assets/cartWidget.png';
 import { useState, useEffect } from 'react';
 import { addProductCart } from './DetalleProducto';
+import './CartWidget.css';
 
 function CartWidget() {
   const [cartCount, setCartCount] = useState(0);

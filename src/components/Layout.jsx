@@ -4,15 +4,23 @@ import CartWidget from "./CartWidget";
 import { Link, Outlet } from "react-router-dom";
 import React from 'react';
 import logoWp from "../assets/logoWp.png";
-import { useContext } from 'react';
-import ThemeContext from './themeContext';
 import './themeContext.css';
+import { FaSun, FaMoon } from "react-icons/fa";
+import AuthForm from "./AuthForm";
 
-function Layout() {
-  const {theme} = useContext(ThemeContext) //
+function Layout({ toggleTheme, theme, isAuthenticated, handleLogin }) {
 
   return (
     <>
+      <button className="buttonTheme" onClick={toggleTheme}>
+        {theme === 'light' ? <FaMoon /> : <FaSun />}
+      </button>
+      {!isAuthenticated && (
+        <>
+          <div className="blur-background"></div>
+          <AuthForm onLogin={handleLogin} />
+        </>
+      )}
       <nav className={`app layout ${theme}`}>
         <ul>
           <li>

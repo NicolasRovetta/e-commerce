@@ -8,10 +8,8 @@ import Cart from "./components/Cart";
 import Nosotros from "./components/Nosotros";
 import DetalleProducto from "./components/DetalleProducto";
 import ThemeContext from "./components/themeContext";
-import "./index.css"; // Asegúrate de importar el archivo CSS correcto
-import { FaSun, FaMoon } from "react-icons/fa"; 
+import "./index.css";
 import Footer from './components/Footer';
-import AuthForm from "./components/AuthForm";
 
 function App() {
      const [theme, setTheme] = useState('light'); // Establecer el tema claro como predeterminado
@@ -32,12 +30,9 @@ function App() {
     <>
       <ThemeContext.Provider value={{theme, toggleTheme}}>
       <div className={`app ${theme}`}>
-      <button className="buttonTheme" onClick={toggleTheme}>
-        {theme === 'light' ? <FaMoon /> : <FaSun />}
-      </button>
       <BrowserRouter basename={basename}>
         <Routes>
-          <Route path="/" element={<Layout/>}>
+          <Route path="/" element={<Layout toggleTheme={toggleTheme} theme={theme} isAuthenticated={isAuthenticated} handleLogin={handleLogin}/>}>
             <Route index element={<Home/>} />
             <Route path="productos" element={<ItemListContainer/>} />
             <Route path="productos/:id" element={<DetalleProducto/>} />
@@ -48,12 +43,6 @@ function App() {
         </Routes>
       </BrowserRouter>
       <Footer />
-      {!isAuthenticated && (
-        <>
-          <div className="blur-background"></div>
-          <AuthForm onLogin={handleLogin} />
-        </>
-      )}
       </div>
       </ThemeContext.Provider>
     </>
