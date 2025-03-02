@@ -180,18 +180,7 @@
   .detalleProducto {
     padding: 0.5em;
   }
-
-  .containerimg {
-    height: 10rem;
-    width: 100%;
-    margin: 0 auto;
-    justify-content: center;
-  }
-
-  .imgProductDetalles {
-    display: block;
-    margin: 0 auto;
-  }
+ 
   .botonIncDec{
     font-size: 0.8em;
     margin-bottom: 0.3em;

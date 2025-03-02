@@ -5,6 +5,7 @@ import { useState, useEffect, useContext } from "react";
 import ThemeContext from "./themeContext";
 import Swal from "sweetalert2";
 import Contador from "./Contador"; // Importar el nuevo componente Contador
+import "./DetalleProducto.css";
 
 export const addProductCart = [];
 

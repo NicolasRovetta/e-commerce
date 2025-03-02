@@ -1,6 +1,6 @@
 import Item from "./Item";
 import { useState } from "react";
-import filterIcon from "../assets/filter.png"; // Ajusta la ruta según la ubicación de tu imagen
+import filterIcon from "../assets/filter.png"; 
 
 function ItemList({ items }) {
   const [selectedCategory, setSelectedCategory] = useState("");
