@@ -40,7 +40,7 @@
   padding: 1em;
   min-height: auto;
 }
-.card button {
+.card button  {
   background-color: #000;
 }
 .card div {
@@ -58,12 +58,12 @@
   justify-content: center;
   text-align: center;
   line-height: 40px;
-  color: white;
+  color: #ffffff;
   font-size: 16px;
   font-weight: bold;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: background-color 0.3s, transform 0.3s;
-  background-color: transparent;
+  background-color: black;
   border: none;
 }
 
@@ -238,3 +238,4 @@
   height: 1.8em;
   width: 2.8em;
 }
+

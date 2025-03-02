@@ -1,12 +1,13 @@
 import { useContext } from 'react'
 import ThemeContext from './themeContext'
 import './themeContext.css'
+import './Home.css'
 
 function Home() {
   const {theme} = useContext(ThemeContext)
 
   return (
-    <div className={`homeNosotros app ${theme}`}>
+    <div className={`home app ${theme}`}>
       <div className="contentContainer">
         <h2>iStore</h2>
         <p className="text">

@@ -13,7 +13,7 @@ function Layout() {
 
   return (
     <>
-      <nav className={`app ${theme}`}>
+      <nav className={`app layout ${theme}`}>
         <ul>
           <li>
             <div className="logo">                           

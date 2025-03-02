@@ -2,11 +2,13 @@
 import { useContext } from 'react'
 import ThemeContext from './themeContext'
 import './themeContext.css'
+import './Nosotros.css'
 
 function Nosotros() {
   const {theme} = useContext(ThemeContext)
   return (
-    <div className={`homeNosotros app ${theme}`}>
+    <div className={`nosotros app ${theme}`}>
+    <div className="contentContainer">
       <h2>Nosotros: Más que una tienda, una experiencia Apple</h2>
       <p className="text">
           En iStore, te invitamos a sumergirte en el ecosistema Apple. No solo
@@ -34,6 +36,7 @@ function Nosotros() {
           diferenciadores. Se simplificaron las declaraciones de misión, visión
           y valores. Se mantuvo el lenguaje conciso y directo.
       </p>
+    </div>
     </div>
   );
 }
