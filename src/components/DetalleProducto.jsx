@@ -85,7 +85,7 @@ function DetalleProducto() {
           <img className="imgProductDetalles" src={producto.image} alt="imagen producto" />
         </div>
         <Contador cantidad={cantidad} setCantidad={setCantidad} />
-        <button onClick={handleAddToCart}>
+        <button className="agregarcart" onClick={handleAddToCart}>
           Agregar al carrito
         </button>
       </div>
