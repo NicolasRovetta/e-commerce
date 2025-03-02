@@ -1,4 +1,3 @@
-
 import { useContext } from 'react'
 import ThemeContext from './themeContext'
 import './themeContext.css'
@@ -10,7 +9,7 @@ function Nosotros() {
     <div className={`nosotros app ${theme}`}>
     <div className="contentContainer">
       <h2>Nosotros: Más que una tienda, una experiencia Apple</h2>
-      <p className="text">
+      <p className="textNosotros">
           En iStore, te invitamos a sumergirte en el ecosistema Apple. No solo
           vendemos productos; ofrecemos una experiencia que redefine la
           innovación. Desde nuestra fundación, nos dedicamos a ser el destino
