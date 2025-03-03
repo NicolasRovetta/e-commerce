@@ -1,0 +1,11 @@
+.filterIcon{
+  width: 2em;
+}
+.filterIconButton:hover{
+    background-color: transparent ;
+}
+
+.containerFilter{
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}

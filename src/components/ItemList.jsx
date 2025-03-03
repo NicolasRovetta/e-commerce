@@ -1,6 +1,7 @@
 import Item from "./Item";
 import { useState } from "react";
 import filterIcon from "../assets/filter.png"; 
+import "./ItemList.css";
 
 function ItemList({ items }) {
   const [selectedCategory, setSelectedCategory] = useState("");
@@ -14,13 +15,11 @@ function ItemList({ items }) {
   };
   return (
     <div style={{ textAlign: "center", marginTop: "1em" }}>
-      <div style={{ display: "flex", justifyContent: "center", marginBottom: "1em" }}>
-        <button
-          className="buttonFilter buttonFilter--primary"
-          onClick={() => setShowFilters(!showFilters)}><img src={filterIcon} className="filterIcon" alt="Filter" /></button>
+      <div style={{ display: "flex", justifyContent: "start", marginBottom: "1em" }}>
+        <button className="filterIconButton" onClick={() => setShowFilters(!showFilters)}><img src={filterIcon} className="filterIcon" alt="Filter" /></button>
       </div>
       {showFilters && (
-        <div>
+        <div className="containerFilter">
           <button
             className="buttonFilter buttonFilter--secondary"
             onClick={() => setSelectedCategory("MacBook")}
