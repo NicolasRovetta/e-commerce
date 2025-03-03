@@ -1,20 +1,29 @@
 import { useState } from "react";
-import "./AuthForm.css"; 
+import "./AuthForm.css";
+import userCredentials from "../data/userCredentials";
 
 function AuthForm({ onLogin }) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
     // Lógica de autenticación aquí
-    onLogin(email, password);
+    if (email && password) {
+      onLogin(email, password);
+      // Guardar las credenciales en el array
+      userCredentials.push({ email, password });
+      console.log("Credenciales guardadas:", userCredentials);
+    } else {
+      setError("Credenciales incorrectas");
+    }
   };
 
   return (
     <form onSubmit={handleSubmit} className="auth-form">
       <div>
-      <h3>Login</h3>
+        <h3>Login</h3>
         <label htmlFor="email">Email:</label>        
         <input
           type="email"
@@ -28,7 +37,7 @@ function AuthForm({ onLogin }) {
       <div>      
         <label htmlFor="password">Password:</label>
         <input
-        placeholder="********"
+          placeholder="********"
           type="password"
           id="password"
           value={password}
@@ -36,6 +45,7 @@ function AuthForm({ onLogin }) {
           required
         />
       </div>
+      {error && <p className="error">{error}</p>}
       <button type="submit">Login</button>
     </form>
   );
