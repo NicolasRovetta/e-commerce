@@ -8,6 +8,9 @@ async function registrarYGuardarUsuario(email, password, otrosDatos) {
         await guardarInformacionUsuario(user.uid, email, otrosDatos);
     } catch (error) {
         console.error("Error durante el registro o guardado:", error);
+        if (error.code === 'auth/weak-password') {
+            alert("La contraseña debe tener al menos 6 caracteres.");
+        }
     }
 }
 

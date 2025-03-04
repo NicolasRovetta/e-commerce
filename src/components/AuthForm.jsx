@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./AuthForm.css";
-import registrarYGuardarUsuario from '../data/userCredentials.js';
+import registrarYGuardarUsuario from "../data/userCredentials.js";
 
 function AuthForm({ onLogin }) {
   const [email, setEmail] = useState("");
@@ -9,19 +9,21 @@ function AuthForm({ onLogin }) {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    // Lógica de autenticación aquí
     if (email && password) {
+      if (password.length < 6) {
+        setError("La contraseña debe tener al menos 6 caracteres.");
+        alert("La contraseña debe tener al menos 6 caracteres.");
+        return; // Detiene la ejecución aquí, onLogin no se llama
+      }
       try {
         await registrarYGuardarUsuario(email, password, {});
         onLogin(email, password);
         console.log("Credenciales guardadas:", { email, password });
       } catch (error) {
         console.error("Error durante el registro:", error);
-        if (error.code === 'auth/email-already-in-use') {
+        if (error.code === "auth/email-already-in-use") {
           setError("El correo electrónico ya está en uso.");
-        } else if (error.code === 'auth/weak-password') {
-          setError("La contraseña debe tener al menos 6 caracteres.");
-        } else if (error.code === 'auth/invalid-email') {
+        } else if (error.code === "auth/invalid-email") {
           setError("El correo electrónico no es válido.");
         } else {
           setError("Error durante el registro");
@@ -36,7 +38,7 @@ function AuthForm({ onLogin }) {
     <form onSubmit={handleSubmit} className="auth-form">
       <div>
         <h3>Login</h3>
-        <label htmlFor="email">Email:</label>        
+        <label htmlFor="email">Email:</label>
         <input
           type="email"
           placeholder="ingrese su email"
@@ -46,7 +48,7 @@ function AuthForm({ onLogin }) {
           required
         />
       </div>
-      <div>      
+      <div>
         <label htmlFor="password">Password:</label>
         <input
           placeholder="********"
