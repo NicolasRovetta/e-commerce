@@ -1,11 +1,12 @@
 import { useState } from "react";
 import "./AuthForm.css";
-import registrarYGuardarUsuario from "../data/userCredentials.js";
+import { registrarYGuardarUsuario, iniciarSesion } from "../data/userCredentials.js";
 
 function AuthForm({ onLogin }) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
+  const [isRegistering, setIsRegistering] = useState(true);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -16,7 +17,11 @@ function AuthForm({ onLogin }) {
         return; // Detiene la ejecución aquí, onLogin no se llama
       }
       try {
-        await registrarYGuardarUsuario(email, password, {});
+        if (isRegistering) {
+          await registrarYGuardarUsuario(email, password, {});
+        } else {
+          await iniciarSesion(email, password);
+        }
         onLogin(email, password);
         console.log("Credenciales guardadas:", { email, password });
       } catch (error) {
@@ -25,6 +30,8 @@ function AuthForm({ onLogin }) {
           setError("El correo electrónico ya está en uso.");
         } else if (error.code === "auth/invalid-email") {
           setError("El correo electrónico no es válido.");
+        } else if (error.code === "auth/user-not-found" || error.code === "auth/wrong-password") {
+          setError("Correo electrónico o contraseña incorrectos.");
         } else {
           setError("Error durante el registro");
         }
@@ -37,7 +44,7 @@ function AuthForm({ onLogin }) {
   return (
     <form onSubmit={handleSubmit} className="auth-form">
       <div>
-        <h3>Login</h3>
+        <h3>{isRegistering ? "Registro" : "Login"}</h3>
         <label htmlFor="email">Email:</label>
         <input
           type="email"
@@ -60,7 +67,10 @@ function AuthForm({ onLogin }) {
         />
       </div>
       {error && <p className="error">{error}</p>}
-      <button type="submit">Login</button>
+      <button type="submit">{isRegistering ? "Registrar" : "Login"}</button>
+      <button type="button" onClick={() => setIsRegistering(!isRegistering)}>
+        {isRegistering ? "¿Ya tienes una cuenta? Inicia sesión" : "¿No tienes una cuenta? Regístrate"}
+      </button>
     </form>
   );
 }

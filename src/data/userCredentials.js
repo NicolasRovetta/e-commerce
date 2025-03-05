@@ -1,5 +1,5 @@
 import { auth, db } from '../firebaseConfig';
-import { createUserWithEmailAndPassword } from "firebase/auth";
+import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
 import { doc, setDoc } from "firebase/firestore";
 
 async function registrarYGuardarUsuario(email, password, otrosDatos) {
@@ -25,7 +25,16 @@ async function guardarInformacionUsuario(uid, email, otrosDatos) {
     }
 }
 
-export default registrarYGuardarUsuario;
+async function iniciarSesion(email, password) {
+    try {
+        await signInWithEmailAndPassword(auth, email, password);
+    } catch (error) {
+        console.error("Error durante el inicio de sesión:", error);
+        throw error;
+    }
+}
+
+export { registrarYGuardarUsuario, iniciarSesion };
 
 // Ejemplo de uso:
 /*registrarYGuardarUsuario("usuario@ejemplo.com", "Contraseña123", { nombre: "Juan", apellido: "Pérez" })
