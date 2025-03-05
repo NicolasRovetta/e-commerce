@@ -40,8 +40,8 @@
   padding: 1em;
   min-height: auto;
 }
-.card button  {
-  background-color: #000;
+.card button:hover  {
+  background-color: rhgba(0, 0, 0, 0.7);
 }
 .card div {
   margin-bottom: 0.05em;

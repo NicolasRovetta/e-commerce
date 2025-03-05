@@ -6,7 +6,7 @@ function AuthForm({ onLogin }) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
-  const [isRegistering, setIsRegistering] = useState(true);
+  const [isRegistering, setIsRegistering] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -34,6 +34,7 @@ function AuthForm({ onLogin }) {
           setError("Correo electrónico o contraseña incorrectos.");
         } else {
           setError("Error durante el registro");
+          alert("Error durante el registro/contraseña inválida");
         }
       }
     } else {
