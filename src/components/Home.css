@@ -12,33 +12,32 @@
     padding: 30px 0;  
   }
 
-.text {
-    padding: 0 250px;
-  }
-
 @media (min-width: 1200px) {
-  .text {
-    padding: 0 300px;
-  }
+  .contentContainer .text {
+    padding: 0 10em;
+}
   .home {
     padding: 50px 0;
   }
 }
 @media (max-width: 768px) {
-  .text {
-    padding: 0 50px;
+  .contentContainer .text {
+    padding: 0 2em; 
   }
   .home {
-    height: auto;
+    height: 75vh;
     padding: 20px 0;
   }
 }
 @media (max-width: 480px) {
-  .home {
-    height: auto;
-    padding: 10px 0;
+  .contentContainer{
+    padding: 10px;
   }
-  .text {
-    padding: 0 20px;
+  .contentContainer .text {
+    padding: 0 1em; 
+  }
+  .home {
+    height: 75vh;
+    padding: 10px 0;
   }
 }

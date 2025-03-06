@@ -108,7 +108,7 @@
   margin-top: 1rem;
   display: flex;
   flex-direction: column;
-  height: 10%; /* Reducir la altura a la mitad */
+  height: 10%; 
   padding: 1em;
 }
 
