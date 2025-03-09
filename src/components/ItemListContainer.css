@@ -7,6 +7,7 @@
 }
 
 .container {
+  background-color: rgb(150, 217, 250, 0.4);
   margin: 0;
   display: flex;
   flex-direction: row;

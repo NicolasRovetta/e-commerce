@@ -21,7 +21,7 @@ function Layout({ toggleTheme, theme, isAuthenticated, handleLogin }) {
           <AuthForm onLogin={handleLogin} />
         </>
       )}
-      <nav className={`app layout ${theme}`}>
+      <nav className={`layout app ${theme}`}>
         <ul>
           <li>
             <div className="logo">                           

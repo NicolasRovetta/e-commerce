@@ -9,6 +9,10 @@ body {
   align-content: center;
 }
 
+.layout{
+  background-color: rgb(150, 217, 250);
+}
+
 .logo {
   display: flex;
   padding: 0;
@@ -27,7 +31,6 @@ nav {
   align-items: center;
   padding: 0 20px;
   box-sizing: border-box;
-  background-color: #96d9fa!important;
   position: relative;
 }
 
