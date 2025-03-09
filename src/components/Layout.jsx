@@ -12,8 +12,8 @@ function Layout({ toggleTheme, theme, isAuthenticated, handleLogin }) {
 
   return (
     <>
-      <button className="buttonTheme" onClick={toggleTheme}>
-        {theme === 'light' ? <FaMoon /> : <FaSun />}
+      <button className="buttonTheme" onClick={toggleTheme} aria-label="Toggle theme">
+        {theme === 'light' ? <FaMoon aria-label="Switch to dark mode" /> : <FaSun aria-label="Switch to light mode" />}
       </button>
       {!isAuthenticated && (
         <>
@@ -30,23 +30,23 @@ function Layout({ toggleTheme, theme, isAuthenticated, handleLogin }) {
           </li>
           <li>
           <pixel-canvas></pixel-canvas>
-            <Link to="/">Inicio</Link>
+            <Link to="/" aria-label="Home">Inicio</Link>
           </li>
           <li>
-            <Link to="productos">Productos</Link> 
+            <Link to="productos" aria-label="Products">Productos</Link> 
           </li>
           <li>
-            <Link to="nosotros">Nosotros</Link> 
+            <Link to="nosotros" aria-label="About us">Nosotros</Link> 
           </li>          
           <li>
-            <Link to="cart"> 
+            <Link to="cart" aria-label="Cart"> 
               <CartWidget />
             </Link>
           </li>
         </ul>
       </nav>
       <Outlet />
-      <a href="https://wa.me/2323613016" target="_blank" rel="noopener noreferrer">
+      <a href="https://wa.me/2323613016" target="_blank" rel="noopener noreferrer" aria-label="Contact us on WhatsApp">
         <img src={logoWp} alt="WhatsApp" className="wp-logo" />
       </a>
     </>

@@ -16,29 +16,32 @@ function ItemList({ items }) {
   return (
     <div style={{ textAlign: "center", marginTop: "1em" }}>
       <div style={{ display: "flex", justifyContent: "start", marginBottom: "1em" }}>
-        <button className="filterIconButton" onClick={() => setShowFilters(!showFilters)}><img src={filterIcon} className="filterIcon" alt="Filter" /></button>
+        <button className="filterIconButton" onClick={() => setShowFilters(!showFilters)} aria-label="Mostrar filtros"><img src={filterIcon} className="filterIcon" alt="Filter" /></button>
       </div>
       {showFilters && (
         <div className="containerFilter">
           <button
             className="buttonFilter buttonFilter--secondary"
             onClick={() => setSelectedCategory("MacBook")}
+            aria-label="Filtrar por MacBook"
           >
             MacBook
           </button>
           <button
             className="buttonFilter buttonFilter--secondary"
             onClick={() => setSelectedCategory("iPhone")}
+            aria-label="Filtrar por iPhone"
           >
             iPhone
           </button>
           <button
             className="buttonFilter buttonFilter--secondary"
             onClick={() => setSelectedCategory("Accesorio")}
+            aria-label="Filtrar por Accesorio"
           >
             Accesorio
           </button>
-          <button className="clear-filter-button buttonFilter--secondary" onClick={handleClearFilter}>
+          <button className="clear-filter-button buttonFilter--secondary" onClick={handleClearFilter} aria-label="Quitar filtro">
             Quitar filtro
           </button>
         </div>

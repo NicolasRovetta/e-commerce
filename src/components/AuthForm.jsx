@@ -68,8 +68,14 @@ function AuthForm({ onLogin }) {
         />
       </div>
       {error && <p className="error">{error}</p>}
-      <button type="submit">{isRegistering ? "Registrar" : "Login"}</button>
-      <button type="button" onClick={() => setIsRegistering(!isRegistering)}>
+      <button type="submit" aria-label={isRegistering ? "Registrar" : "Login"}>
+        {isRegistering ? "Registrar" : "Login"}
+      </button>
+      <button 
+        type="button" 
+        onClick={() => setIsRegistering(!isRegistering)} 
+        aria-label={isRegistering ? "¿Ya tienes una cuenta? Inicia sesión" : "¿No tienes una cuenta? Regístrate"}
+      >
         {isRegistering ? "¿Ya tienes una cuenta? Inicia sesión" : "¿No tienes una cuenta? Regístrate"}
       </button>
     </form>

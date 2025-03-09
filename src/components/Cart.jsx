@@ -55,7 +55,7 @@ function Cart() {
       <div className="cart">
       {cartItems.length === 0 ? <h2>Carrito vacío</h2> : <h2>Carrito</h2>}          
         
-        <button type="reset" onClick={clearCart}>
+        <button type="reset" onClick={clearCart} aria-label="Vaciar carrito">
           Vaciar carrito
         </button>
         <h4>Total de productos: {cartItems.length}</h4>
@@ -111,7 +111,9 @@ function Cart() {
             <label>CVV:</label>
             <input type="text" name="cvv" required />
           </div>
-          <button type="submit" className="buy">Realizar pago</button>
+          <button type="submit" className="buy" aria-label="Realizar pago">
+            Realizar pago
+          </button>
         </form>
       </div>
     </div>

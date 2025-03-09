@@ -37,7 +37,7 @@ function Item({ categoria, modelo, precio, id, image, descripcion }) {
         </div>
       </Link>
       <Contador cantidad={cantidad} setCantidad={setCantidad} />
-      <button onClick={handleAddToCart} className="buttonAdd">Agregar al carrito</button>
+      <button onClick={handleAddToCart} className="buttonAdd" aria-label="Agregar al carrito">Agregar al carrito</button>
     </div>
   );
 }
