@@ -21,8 +21,8 @@
   .textHome{
     padding: 0.5em 2em;
   }
-
-@media (max-width: 1200px) {
+/*------------ Media Queries-----------*/
+@media (max-width: 1600px) {
   .contentContainer .textHome {
     padding: 10em;    
 }
@@ -30,25 +30,36 @@
     padding: 50px 0;
   }
 }
+@media (max-width: 1200px) {
+  .contentContainer .textHome {
+    padding: 5em;    
+}
+  .home {    
+    padding: 3em;
+  }
+}
+@media (max-width: 1024px) {
+  .contentContainer .textHome {
+    padding: 3em;    
+}
+  .home {    
+    padding: 3em;
+  }
+}
 @media (max-width: 768px) {
   .contentContainer .textHome {
-    padding: 0 2em; 
-  }
-  .home {
-    height: 75vh;
-    padding: 20px 0;
+    padding: 2em;    
+}
+  .home {    
+    padding: 3em ;
   }
 }
 @media (max-width: 480px) {
-  .contentContainer{
-    padding: 10px;
-  }
   .contentContainer .textHome {
-    padding: 0 1em; 
-  }
-  .home {
-    height: 75vh;
-    padding: 10px 0;
+    padding: 1em;    
+}
+  .home {    
+    padding: 2em;
   }
 }
 
