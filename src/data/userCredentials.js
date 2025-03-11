@@ -35,8 +35,3 @@ async function iniciarSesion(email, password) {
 }
 
 export { registrarYGuardarUsuario, iniciarSesion };
-
-// Ejemplo de uso:
-/*registrarYGuardarUsuario("usuario@ejemplo.com", "Contraseña123", { nombre: "Juan", apellido: "Pérez" })
-.then(() => console.log("Proceso completo"))
-.catch(error => console.error("Error final:", error));*/

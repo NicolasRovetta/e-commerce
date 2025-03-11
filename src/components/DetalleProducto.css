@@ -34,8 +34,7 @@ button:hover {
 }
 
 .imgProductDetalles:hover {
-    transform: scale(1.1);
-    
+    transform: scale(1.1);    
 }
 
 .detalleProducto {
@@ -57,4 +56,12 @@ button:hover {
     justify-content: center;
     align-items: center;
     height: 100vh;
+  }
+
+  /*----- Media Queries -----*/
+
+  @media (max-width: 768px) {
+    .detalleProducto {
+      width: 80%;
+    }
   }

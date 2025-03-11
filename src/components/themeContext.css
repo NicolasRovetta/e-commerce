@@ -12,7 +12,7 @@
   display: flex;
   position: absolute;
   background-color: transparent;
-  border:#333;
+  border: #333;
   color: RGB(255, 200, 0);
   padding: 15px 20px;
   border-radius: 10px;
@@ -22,7 +22,7 @@
 }
 
 button {
-  background-color: #f5f5f5;
+  background-color: #f5f5f586;
   color: #333;
 }
 
@@ -36,11 +36,6 @@ h2, h3, h4, p, a {
 
 .app.dark h2, .app.dark h3, .app.dark h4, .app.dark p, .app.dark a {
   color: #f5f5f5;
-}
-
-button {
-  background-color: #f5f5f586;
-  color: #333;
 }
 
 .app nav ul {
@@ -70,7 +65,7 @@ button {
   z-index: 999;
 }
 
-.cart.dark {
+.cart.dark, .formulario.dark {
   background-color: #444;
   color: #fff;
 }
@@ -79,16 +74,7 @@ button {
   border-bottom: 1px solid #555;
 }
 
-.formulario.dark {
-  background-color: #444;
-  color: #fff;
-}
-
-.formulario.dark h2 {
-  color: #fff;
-}
-
-.formulario.dark form label {
+.formulario.dark h2, .formulario.dark form label {
   color: #ddd;
 }
 
@@ -100,12 +86,16 @@ button {
 
 @media (max-width: 768px) {
   nav ul {
-    display: none;
+    display: none;    
   }
 
   nav .hamburger-menu {
     display: block;
     cursor: pointer;
+  }
+
+  nav a, nav .active {
+    color: white;
   }
 
   nav .hamburger-menu div {
@@ -121,7 +111,7 @@ button {
   }
 
   nav .hamburger-menu.active div:nth-child(2) {
-    opacity: 0;
+    opacity: 80%;
   }
 
   nav .hamburger-menu.active div:nth-child(3) {
@@ -131,16 +121,23 @@ button {
   nav ul.active {
     display: flex;
     flex-direction: column;
+    align-items: center;
     position: absolute;
     top: 50px;
     left: 0;
     width: 100%;
-    background-color: #fff;
+    background-color: rgba(0, 0, 0, 0.9);
+    opacity: 0.9;
     border-top: 1px solid #ccc;
   }
 
   nav ul.active li {
     padding: 10px;
     text-align: center;
+    color: white;
+  }
+
+  nav ul.active .logoCart {
+    filter: brightness(0) invert(1);
   }
 }

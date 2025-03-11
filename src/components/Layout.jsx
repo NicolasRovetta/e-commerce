@@ -11,9 +11,15 @@ import AuthForm from "./AuthForm";
 function Layout({ toggleTheme, theme, isAuthenticated, handleLogin }) {
   const [menuActive, setMenuActive] = useState(false);
 
-  const toggleMenu = () => {
-    setMenuActive(!menuActive);
-  };
+  const toggleMenu = () => setMenuActive(!menuActive);
+  const handleMenuItemClick = () => setMenuActive(false);
+
+  const menuItems = [
+    { to: "/", label: "Home", text: "Inicio" },
+    { to: "productos", label: "Products", text: "Productos" },
+    { to: "nosotros", label: "About us", text: "Nosotros" },
+    { to: "cart", label: "Cart", text: <CartWidget /> },
+  ];
 
   return (
     <>
@@ -34,25 +40,15 @@ function Layout({ toggleTheme, theme, isAuthenticated, handleLogin }) {
         </div>
         <ul className={menuActive ? 'active' : ''}>
           <li>
-            <div className="logo">                           
-                <img src={LogoW} alt="Logo" className="white-logo" />              
+            <div className="logo">
+              <img src={LogoW} alt="Logo" className="white-logo" />
             </div>
           </li>
-          <li>
-          <pixel-canvas></pixel-canvas>
-            <Link to="/" aria-label="Home">Inicio</Link>
-          </li>
-          <li>
-            <Link to="productos" aria-label="Products">Productos</Link> 
-          </li>
-          <li>
-            <Link to="nosotros" aria-label="About us">Nosotros</Link> 
-          </li>          
-          <li>
-            <Link to="cart" aria-label="Cart"> 
-              <CartWidget />
-            </Link>
-          </li>
+          {menuItems.map(({ to, label, text }) => (
+            <li key={to}>
+              <Link to={to} aria-label={label} onClick={handleMenuItemClick}>{text}</Link>
+            </li>
+          ))}
         </ul>
       </nav>
       <Outlet />

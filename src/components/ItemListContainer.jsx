@@ -21,7 +21,7 @@ function ItemListContainer() {
         };
 
         fetchProductos();
-     }, []) // array de dependencias vacío para que se ejecute solo una vez
+     }, [0]) // array de dependencias vacío para que se ejecute solo una vez en 0mseg
 
   return (
     <div className={`container app ${theme}`}>     

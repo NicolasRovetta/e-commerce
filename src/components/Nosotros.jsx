@@ -8,10 +8,9 @@ function Nosotros() {
   return (
     <div className={`nosotros app ${theme}`}>
     <div className="contentContainer">
-      <h2>Nosotros: Más que una tienda, una experiencia Apple</h2>
+      <h2>Nosotros: Más que una tienda, una experiencia Apple</h2><br />
       <p className="textNosotros">
-      <strong>Bienvenido a iStore, tu ecosistema Apple</strong>
-  <br />
+      <strong>Bienvenido a iStore, tu ecosistema Apple</strong>  
   <br />
   ✅ <strong>Asesoramiento experto:</strong> Encuentra el dispositivo ideal con la guía de nuestros expertos.
   <br />
