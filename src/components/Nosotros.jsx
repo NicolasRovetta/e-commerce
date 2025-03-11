@@ -13,9 +13,6 @@ function Nosotros() {
       <strong>Bienvenido a iStore, tu ecosistema Apple</strong>
   <br />
   <br />
-  No solo vendemos productos, ofrecemos una experiencia única. Como especialistas en Apple, brindamos:
-  <br />
-  <br />
   ✅ <strong>Asesoramiento experto:</strong> Encuentra el dispositivo ideal con la guía de nuestros expertos.
   <br />
   ✅ <strong>Productos originales:</strong> Garantía oficial en iPhones, Macs, iPads, Apple Watches y más.

@@ -14,11 +14,6 @@ function Home() {
         <strong>Bienvenido a iStore, el destino definitivo para los amantes de Apple.</strong>
   <br />
   <br />
-  Sumérgete en un ecosistema donde la innovación y la tecnología se fusionan para ofrecerte la mejor experiencia.  
-  Descubre una selección exclusiva de <strong>iPhones, Macs, iPads, Apple Watches y accesorios originales</strong>,  
-  diseñados para elevar tu creatividad, maximizar tu productividad y mantenerte siempre conectado.  
-  <br />
-  <br />
   🌟 <strong>Experiencia inmersiva:</strong> Prueba nuestros dispositivos y descubre todo su potencial en acción.  
   <br />
   🎯 <strong>Asesoramiento experto:</strong> Nuestro equipo de especialistas te guiará en cada elección.  

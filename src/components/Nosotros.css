@@ -6,7 +6,7 @@
     margin: 1rem auto;
     margin-bottom: 1rem;
     border-radius: 8px;
-    background-color: rgb(255, 117, 20 , 0.25)
+    background: linear-gradient(to bottom, rgba(44, 62, 80, 0.1), rgba(0, 0, 0, 0.5));
   }
 
 .nosotros {
