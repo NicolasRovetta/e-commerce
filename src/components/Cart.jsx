@@ -52,62 +52,56 @@ function Cart() {
 
   return (
     <div className={`containerCart app ${theme}`}>
-      <div className="cart">
-      {cartItems.length === 0 ? <h2>Carrito vacío</h2> : <h2>Carrito</h2>}          
-        
-        <button type="reset" onClick={clearCart} aria-label="Vaciar carrito">
-          Vaciar carrito
-        </button>
-        <h4>Total de productos: {cartItems.length}</h4>
-        <h4>
-          Total a pagar: $
-          {cartItems.reduce((acc, item) => acc + item.precio * item.count, 0)}
-        </h4>
-        <ul>
+      <div className={`cart ${theme}`}>
+        {cartItems.length === 0 ? <h2>Carrito vacío</h2> : <h2>Carrito</h2>}
+        <div className="cart-header">
+          <button type="reset" onClick={clearCart} aria-label="Vaciar carrito" className="clear-cart-btn">
+            Vaciar carrito
+          </button>
+          <div className="cart-summary">
+            <h4>Total de productos: {cartItems.length}</h4>
+            <h4>Total a pagar: ${cartItems.reduce((acc, item) => acc + item.precio * item.count, 0)}</h4>
+          </div>
+        </div>
+        <ul className="cart-items">
           {cartItems.map((item) => (
-            <li key={item.id} className="card">
-              <div>{item.categoria}</div>
-              <div>
-                <h3>{item.modelo}</h3>
-              </div>
+            <li key={item.id} className="cart-item">
               <img className="imgProduct" src={item.image} alt="imagen del producto" />
-              <div>
-                <strong>Precio: ${item.precio}</strong>
-              </div>
-              <div>
-                <strong>Cantidad: {item.count}</strong>
-              </div>
-              <div>
-                <strong>Sub total: ${item.precio * item.count}</strong>
+              <div className="item-details">
+                <div>{item.categoria}</div>
+                <h3>{item.modelo}</h3>
+                <div><strong>Precio: ${item.precio}</strong></div>
+                <div><strong>Cantidad: {item.count}</strong></div>
+                <div><strong>Sub total: ${item.precio * item.count}</strong></div>
               </div>
             </li>
           ))}
         </ul>
       </div>
-      <div className="formulario">
+      <div className={`formulario ${theme}`}>
         <form onSubmit={handlePurchase}>
           <h2>Finalizar Compra</h2>
-          <div>
+          <div className="form-group">
             <label>Nombre y apellido:</label>
             <input type="text" name="nombre y apellido" required />
           </div>
-          <div>
+          <div className="form-group">
             <label>Correo Electrónico:</label>
             <input type="email" name="correo" required />
           </div>
-          <div>
+          <div className="form-group">
             <label>Teléfono:</label>
             <input type="tel" name="telefono" required />
           </div>
-          <div>
+          <div className="form-group">
             <label>Número de tarjeta:</label>
             <input type="text" name="numero de tarjeta" required />
           </div>
-          <div>
+          <div className="form-group">
             <label>Vencimiento:</label>
             <input type="text" name="vencimiento" required />
           </div>
-          <div>
+          <div className="form-group">
             <label>CVV:</label>
             <input type="text" name="cvv" required />
           </div>
