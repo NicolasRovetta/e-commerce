@@ -25,7 +25,7 @@
 .cart {
   width: 100%;
   max-width: 800px;
-  background-color: #fff;
+  background: linear-gradient(to right, #96d9fa98, #89d3f810);
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 20px;
@@ -107,7 +107,7 @@
 .formulario {
   width: 100%;
   max-width: 45em;
-  background-color: #fff;
+  background: linear-gradient(to right, #96d9fa98, #89d3f810);
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 10px; 

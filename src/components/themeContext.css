@@ -59,10 +59,6 @@ button {
   border-top: 1px solid #ccc;
 }
 
-.app.dark .footer .payment-logos img {
-  filter: brightness(0) invert(1);
-}
-
 .blur-background {
   position: fixed;
   top: 0;
@@ -100,4 +96,51 @@ button {
   background-color: #555;
   color: #fff;
   border: 1px solid #666;
+}
+
+@media (max-width: 768px) {
+  nav ul {
+    display: none;
+  }
+
+  nav .hamburger-menu {
+    display: block;
+    cursor: pointer;
+  }
+
+  nav .hamburger-menu div {
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    margin: 5px 0;
+    transition: 0.4s;
+  }
+
+  nav .hamburger-menu.active div:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+  }
+
+  nav .hamburger-menu.active div:nth-child(2) {
+    opacity: 0;
+  }
+
+  nav .hamburger-menu.active div:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+  }
+
+  nav ul.active {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    border-top: 1px solid #ccc;
+  }
+
+  nav ul.active li {
+    padding: 10px;
+    text-align: center;
+  }
 }

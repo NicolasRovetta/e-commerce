@@ -2,13 +2,18 @@ import "./Layout.css";
 import LogoW from "../assets/logoEcommerce.png";
 import CartWidget from "./CartWidget";
 import { Link, Outlet } from "react-router-dom";
-import React from 'react';
+import React, { useState } from 'react';
 import logoWp from "../assets/logoWp.png";
 import './themeContext.css';
 import { FaSun, FaMoon } from "react-icons/fa";
 import AuthForm from "./AuthForm";
 
 function Layout({ toggleTheme, theme, isAuthenticated, handleLogin }) {
+  const [menuActive, setMenuActive] = useState(false);
+
+  const toggleMenu = () => {
+    setMenuActive(!menuActive);
+  };
 
   return (
     <>
@@ -22,7 +27,12 @@ function Layout({ toggleTheme, theme, isAuthenticated, handleLogin }) {
         </>
       )}
       <nav className={`layout app ${theme}`}>
-        <ul>
+        <div className="hamburger-menu" onClick={toggleMenu}>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <ul className={menuActive ? 'active' : ''}>
           <li>
             <div className="logo">                           
                 <img src={LogoW} alt="Logo" className="white-logo" />              

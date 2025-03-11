@@ -33,7 +33,3 @@
   width: 40px;
   height: auto;
 }
-
-.app.dark .payment-logos img {
-  filter: brightness(0) invert(1);
-}
