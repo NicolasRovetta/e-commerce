@@ -37,3 +37,13 @@
 .payment{
   color: black;
 }
+
+/*-----------Media Queries-----------*/
+@media screen and (max-width: 768px) {
+  .footer {
+    flex-direction: column;
+  }
+  .footer .payment-logos {
+    flex-direction: column;
+  }
+}

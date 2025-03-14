@@ -18,6 +18,7 @@
     "@mercadopago/sdk-js": "^0.0.3",
     "@mercadopago/sdk-react": "^0.0.23",
     "axios": "^1.7.9",
+    "dotenv": "^16.4.7",
     "firebase": "^11.4.0",
     "gh-pages": "^6.3.0",
     "mercadopago": "^2.3.0",

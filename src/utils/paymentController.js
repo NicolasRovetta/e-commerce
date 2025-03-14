@@ -4,9 +4,9 @@ export const createPreference = async (req, res) => {
   const preference = {
     items: [
       {
-        title: 'Mi producto',
-        quantity: 1,
-        unit_price: 2000,
+        title: 'Mi producto',  // chequear a futuro
+        quantity: 1,           // chequear a futuro
+        unit_price: 2000,      // chequear a futuro
       },
     ],
   };
