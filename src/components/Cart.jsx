@@ -4,6 +4,8 @@ import ThemeContext from "./themeContext";
 import "./themeContext.css";
 import "./cart.css";
 import { addProductCart } from "./DetalleProducto";
+import Checkout from "./Checkout";
+import axios from "axios"; 
 
 function Cart() {
   const { theme } = useContext(ThemeContext);
@@ -24,7 +26,7 @@ function Cart() {
     setCartItems([]);
   };
 
-  const handlePurchase = (e) => {
+  const handlePurchase = async (e) => {
     e.preventDefault();
     const total = cartItems.reduce((acc, item) => acc + item.precio * item.count, 0);
     const purchaseId = Math.floor(Math.random() * 1000000);
@@ -41,11 +43,33 @@ function Cart() {
       showCancelButton: true,
       confirmButtonText: "Sí, comprar",
       cancelButtonText: "Cancelar",
-    }).then((result) => {
+    }).then(async (result) => {
       if (result.isConfirmed) {
-        Swal.fire("Compra realizada", `Su compra ha sido confirmada con el ID ${purchaseId}`, "success");
-        console.log(purchaseDetails); // Aquí puedes manejar el array de compra
-        clearCart();
+        try {
+          const response = await axios.post("https://api.mercadopago.com/checkout/preferences", {
+            items: cartItems.map(item => ({
+              title: item.modelo,
+              quantity: item.count,
+              currency_id: "ARS",
+              unit_price: item.precio,
+            })),
+            back_urls: {
+              success: "http://localhost:5176/success",
+              failure: "http://localhost:5176/failure",
+              pending: "http://localhost:5176/pending",
+            },
+            auto_return: "approved",
+          }, {
+            headers: {
+              Authorization: `Bearer TEST-1474310529538889-031221-eb5988dd12e35ea2edee1c4c130f94bb-327361025`, // Reemplaza con tu nuevo token de acceso de Mercado Pago
+            },
+          });
+
+          window.location.href = response.data.init_point; // Redirigir a la URL de pago de Mercado Pago
+        } catch (error) {
+          console.error("Error al crear la preferencia de pago:", error.response ? error.response.data : error.message);
+          Swal.fire("Error", `Hubo un problema al procesar su compra: ${error.response ? error.response.data.message : error.message}. Inténtelo de nuevo.`, "error");
+        }
       }
     });
   };
@@ -105,9 +129,7 @@ function Cart() {
             <label>CVV:</label>
             <input type="text" name="cvv" required />
           </div>
-          <button type="submit" className="buy" aria-label="Realizar pago">
-            Realizar pago
-          </button>
+          <Checkout cartItems={cartItems} />
         </form>
       </div>
     </div>
