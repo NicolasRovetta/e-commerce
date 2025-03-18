@@ -117,18 +117,6 @@ function Cart() {
             <label>Teléfono:</label>
             <input type="tel" name="telefono" required />
           </div>
-          <div className="form-group">
-            <label>Número de tarjeta:</label>
-            <input type="text" name="numero de tarjeta" required />
-          </div>
-          <div className="form-group">
-            <label>Vencimiento:</label>
-            <input type="text" name="vencimiento" required />
-          </div>
-          <div className="form-group">
-            <label>CVV:</label>
-            <input type="text" name="cvv" required />
-          </div>
           <Checkout cartItems={cartItems} />
         </form>
       </div>
