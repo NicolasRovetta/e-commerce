@@ -9,6 +9,12 @@ body {
   align-content: center;
 }
 
+.buttonTheme:hover {
+  background-color: transparent;
+  transform: none;
+  color: RGB(255, 200, 0);
+}
+
 .layout{
   background-color: rgb(150, 217, 250);
 }
@@ -59,7 +65,6 @@ nav a,
 nav .active {
   text-decoration: none;
   color: black;
-  transition: background-color 0.3s;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   font-size: 14px;
   font-weight: bold;
@@ -68,11 +73,6 @@ nav .active {
   background-color: transparent;
   border: none;
   border-radius: 12px;
-}
-
-nav a:hover,
-nav .active:hover {
-  background-color: rgba(240, 248, 255, 0.5);
 }
 
 nav .active {

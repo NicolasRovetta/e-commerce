@@ -4,6 +4,7 @@
   justify-content: center;
   height: 40px; 
   width: 150px;
+  background-color:grey;
 }
 
 .container {
@@ -132,11 +133,13 @@
   margin-bottom: 0.3em;
   margin-right: 6px;
   margin-left: 6px;
+  background-color: rgb(150, 217, 250)
 }
 .buttonAdd{
   max-width: 80%;
   max-height: fit-content;
-  border-radius: 10px
+  border-radius: 10px;
+  background-color: rgb(150, 217, 250)
 }
 
 @media (max-width: 768px) {

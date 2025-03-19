@@ -27,7 +27,7 @@
 .auth-form input {
   padding: 0.5em;
   border: 1px solid #ccc;
-  border-radius: 4px;
+  border-radius: 4px;  
 }
 
 .auth-form button {
@@ -46,4 +46,8 @@
 
 h3{
     text-align: center;
+}
+
+.formulario form input {
+  background-color:floralwhite
 }
