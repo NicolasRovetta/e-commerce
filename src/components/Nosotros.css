@@ -10,11 +10,11 @@
   }
 
 .nosotros {
-    height: auto;
+    height: 100vh;
     margin: 0;
     padding: 30px 0;  
     overflow: hidden;
-    background: linear-gradient(to right, #96d9fa98, #96d9fa10);
+    background: rgb(100, 100, 124);
   }
 
 .textNosotros {

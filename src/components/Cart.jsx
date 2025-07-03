@@ -107,15 +107,15 @@ function Cart() {
           <h2>Finalizar Compra</h2>
           <div className="form-group">
             <label>Nombre y apellido:</label>
-            <input type="text" name="nombre y apellido" required />
+            <input type="text" name="nombre y apellido" required placeholder="Ej: Juan Pérez" />
           </div>
           <div className="form-group">
             <label>Correo Electrónico:</label>
-            <input type="email" name="correo" required />
+            <input type="email" name="correo" required placeholder="Ej: juan@email.com" />
           </div>
           <div className="form-group">
             <label>Teléfono:</label>
-            <input type="tel" name="telefono" required />
+            <input type="tel" name="telefono" required placeholder="Ej: 1122334455" />
           </div>
           <Checkout cartItems={cartItems} />
         </form>

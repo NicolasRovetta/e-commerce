@@ -15,7 +15,7 @@
     flex-direction: column;
     min-height: 100vh;
     overflow: hidden;
-    background: linear-gradient(to right, #96d9fa98, #96d9fa10);
+    background: rgb(100, 100, 124);
   }
 
   .textHome{

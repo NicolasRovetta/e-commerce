@@ -74,8 +74,8 @@ function DetalleProducto() {
     );
 
   return (
-    <div className={`backgroundDetalleProducto app ${theme}`}>
-      <div className="detalleProducto">
+    <div className={`backgroundDetalleProducto app ${theme} `}>
+      <div className="detalleProducto ">
         <h2>{producto.modelo}</h2>
         <p>{producto.descripcion}</p>
         <h3>

@@ -41,7 +41,7 @@ function Layout({ toggleTheme, theme, isAuthenticated, handleLogin }) {
         <ul className={menuActive ? 'active' : ''}>
           <li>
             <div className="logo">
-              <img src={LogoW} alt="Logo" className="white-logo" />
+              <img src={LogoW} alt="Logo"/>
             </div>
           </li>
           {menuItems.map(({ to, label, text }) => (

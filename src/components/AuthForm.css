@@ -5,13 +5,13 @@
   gap: 1em;
   padding: 2em;
   border: 3px solid #575757;
-  border-radius: 8px;
-  background-color: #f9f9f9;
+  border-radius: 20px;
+  background-color: rgb(249, 249, 249, 0.2);
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: 1000;
+  z-index: 999;
 }
 
 .auth-form div {
@@ -46,6 +46,7 @@
 
 h3{
     text-align: center;
+    color: black;
 }
 
 .formulario form input {
