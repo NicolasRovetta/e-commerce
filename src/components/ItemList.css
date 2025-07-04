@@ -9,3 +9,56 @@
   border-top: 1px solid black;
   border-bottom: 1px solid black;
 }
+
+.sideFilterOverlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.3);
+  z-index: 1000;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.sideFilterPanel {
+  width: 25vw;
+  min-width: 220px;
+  max-width: 400px;
+  height: 100vh;
+  background: rgba(255,255,255,0.85); /* más transparente */
+  box-shadow: -2px 0 8px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 2em 1.5em;
+  gap: 1em;
+  transform: translateX(100%);
+  opacity: 0;
+  transition: transform 0.4s cubic-bezier(0.4,0,0.2,1), opacity 0.3s;
+}
+
+.sideFilterOverlay .sideFilterPanel {
+  transform: translateX(140%);
+  opacity: 0.4;
+}
+
+@media (max-width: 600px) {
+  .sideFilterPanel {
+    width: 70vw;
+    min-width: unset;
+    padding: 1em 0.5em;
+  }
+}
+
+.buttonFilter {
+  width: 100%;
+  margin-bottom: 0.5em;
+}
+
+.clear-filter-button {
+  margin-top: 1em;
+  background: #eee;
+  color: #333;
+}

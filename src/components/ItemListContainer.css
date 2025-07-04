@@ -6,11 +6,17 @@
 
 .botonIncDec {
   background-color: rgb(196, 159, 59);
-  border-radius: 20px;
+  border-radius: 10px;
   font-size: 1em;
   margin-bottom: 0.3em;
   margin-left: 6px;
   margin-right: 6px;
+  transition: background-color 0.3s, color 0.3s, transform 0.3s;
+}
+.botonIncDec:hover {
+  background-color: rgb(168, 129, 30);
+  color: white;
+  transform: scale(1.04);
 }
 
 .buttonAdd {
@@ -129,6 +135,9 @@
   margin-top: 1rem;
   padding: 1em;
 }
+ h3{
+  color: white;
+ } 
 
 .imgProductDetalles {
   max-height: 100%;

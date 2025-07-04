@@ -77,14 +77,24 @@ nav a,
 nav .active {
   text-decoration: none;
   color:white;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   font-size: 14px;
   font-weight: bold;
   text-align: center;
   line-height: 40px;
   background-color: transparent;
-  border: none;
-  border-radius: 12px;
+  border-top: #ccc solid 2px;
+  border-bottom: #ccc solid 2px;
+  padding: 5px 20px;
+  border-radius: 10px;
+  transition: border-color 1.2s, border-width 0.6s;
+}
+
+nav a:hover, nav .active:hover {
+  border-top: 0 solid transparent;
+  border-bottom: 0 solid transparent;
+  border-left: #ccc solid 2px;
+  border-right: #ccc solid 2px;
+  transition: border-color 1.2s, border-width 0.6s;
 }
 
 nav .active {
