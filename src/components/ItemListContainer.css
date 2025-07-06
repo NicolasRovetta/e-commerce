@@ -78,8 +78,8 @@
 
 .card {
   align-content: center;
-  background-color: rgb(47, 50, 63);
-  border: 1px solid #fff;
+  background-color: rgb(47, 50, 63, 0.6);
+  border: 2px solid rgb(47, 50, 63);
   border-radius: 15px;
   display: flex;
   flex: 0 0 25%;
@@ -101,7 +101,7 @@
 }
 
 .container {
-  background: rgb(100, 100, 124);
+  background: white;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;

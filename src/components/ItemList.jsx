@@ -16,11 +16,20 @@ function ItemList({ items }) {
   return (
     <div style={{ textAlign: "center", marginTop: "1em", position: "relative" }}>
       <div style={{ display: "flex", justifyContent: "end", marginBottom: "1em" }}>
-        <button className="filterIconButton" onClick={() => setShowFilters(!showFilters)} aria-label="Mostrar filtros"><img src={filterIcon} className="filterIcon" alt="Filter" /></button>
+        {!showFilters && (
+          <button className="filterIconButton" onClick={() => setShowFilters(!showFilters)} aria-label="Mostrar filtros"><img src={filterIcon} className="filterIcon" alt="Filter" /></button>
+        )}
       </div>
       {showFilters && (
         <div className="sideFilterOverlay" onClick={() => setShowFilters(false)}>
           <div className="sideFilterPanel" onClick={e => e.stopPropagation()}>
+            <button
+              className="closeFilterButton"
+              onClick={() => setShowFilters(false)}
+              aria-label="Cerrar panel de filtros"
+            >
+              &#10005;
+            </button>
             <button
               className="buttonFilter buttonFilter--secondary"
               onClick={() => setSelectedCategory("MacBook")}

@@ -9,8 +9,7 @@
   }
 
 .home {
-    height: auto;  
-    padding: 30px 0;  
+    height: auto;    
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -26,17 +25,11 @@
   .contentContainer .textHome {
     padding: 10em;    
 }
-  .home {    
-    padding: 50px 0;
-  }
 }
 @media (max-width: 1200px) {
   .contentContainer .textHome {
     padding: 5em;    
 }
-  .home {    
-    padding: 3em;
-  }
 }
 @media (max-width: 1024px) {
   .contentContainer .textHome {

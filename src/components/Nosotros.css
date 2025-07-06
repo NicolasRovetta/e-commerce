@@ -1,4 +1,5 @@
 .modern-nosotros {
+  border: 1px solid #ccc;
   position: relative;
   z-index: 2;
   padding: 3em 2em 3em 2em;
@@ -215,6 +216,7 @@
 .modern-nosotros.dark .interactive-btn:hover {
   background: #0ea5e9 !important;
   color: #fff !important;
+  border: 1px solid #ccc !important;
 }
 
 .animated-bg-nosotros {

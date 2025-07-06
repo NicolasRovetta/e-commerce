@@ -44,13 +44,13 @@ function ItemListContainer() {
   return (
     <div className={`container app ${theme}`}>     
         {loading 
-          ? <div style={{textAlign: 'center', marginTop: '2em'}}>Cargando productos...</div> 
+          ? <div style={{textAlign: 'center', marginTop: '2em',color: 'black'}}>Cargando productos...</div> 
           : <>
               <ItemList items={currentItems}/>
-              <div style={{display:'flex', justifyContent:'center', gap:'1em', marginTop:'1em'}}>
-                <button onClick={handlePrevPage} disabled={currentPage === 1}>Anterior</button>
+              <div style={{display:'flex', justifyContent:'center', gap:'1em', marginTop:'1em',color: 'black'}}>
+                <button style={{color:'black'}} onClick={handlePrevPage} disabled={currentPage === 1}>Anterior</button>
                 <span>Página {currentPage} de {totalPages}</span>
-                <button onClick={handleNextPage} disabled={currentPage === totalPages}>Siguiente</button>
+                <button style={{color:'black'}} onClick={handleNextPage} disabled={currentPage === totalPages}>Siguiente</button>
               </div>
             </>
         }    
