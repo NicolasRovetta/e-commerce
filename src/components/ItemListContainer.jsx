@@ -47,9 +47,9 @@ function ItemListContainer() {
           ? <div style={{textAlign: 'center', marginTop: '2em',color: 'black'}}>Cargando productos...</div> 
           : <>
               <ItemList items={currentItems}/>
-              <div style={{display:'flex', justifyContent:'center', gap:'1em', marginTop:'1em',color: 'black'}}>
+              <div  style={{display:'flex', justifyContent:'center', gap:'1em', marginTop:'auto', alignSelf:'flex-end', width:'100%'}}>
                 <button style={{color:'black'}} onClick={handlePrevPage} disabled={currentPage === 1}>Anterior</button>
-                <span>Página {currentPage} de {totalPages}</span>
+                <span style={{color:'black'}}>Página {currentPage} de {totalPages}</span>
                 <button style={{color:'black'}} onClick={handleNextPage} disabled={currentPage === totalPages}>Siguiente</button>
               </div>
             </>
