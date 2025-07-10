@@ -1,13 +1,12 @@
 import { Link } from "react-router-dom";
 import { sendCart } from "./DetalleProducto";
-import React, { useState, useContext } from "react";
-import ThemeContext from "./themeContext";
+import React, { useState } from "react";
 import Swal from "sweetalert2";
 import Contador from "./Contador"; 
 
 function Item({ categoria, modelo, precio, id, image, descripcion }) {
   const producto = { categoria, modelo, precio, id, image };
-  const { theme } = useContext(ThemeContext);
+
   const [cantidad, setCantidad] = useState(0); // Definimos el estado cantidad
 
   const handleAddToCart = () => {
@@ -25,7 +24,7 @@ function Item({ categoria, modelo, precio, id, image, descripcion }) {
   };
 
   return (
-    <div className={`card ${theme}`}>
+    <div className='card'>
       <Link to={`/productos/${id}`}>
         <div>{categoria}</div>
         <div>

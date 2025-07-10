@@ -1,8 +1,7 @@
 import { useParams } from "react-router-dom";
 import Error from "./Error";
 import { getFirestore, doc, getDoc } from "firebase/firestore";
-import { useState, useEffect, useContext } from "react";
-import ThemeContext from "./themeContext";
+import { useState, useEffect } from "react";
 import Swal from "sweetalert2";
 import Contador from "./Contador"; // Importa  componente Contador
 import "./DetalleProducto.css";
@@ -30,7 +29,7 @@ export const counter = (initialValue = 0) => {
 };
 
 function DetalleProducto() {
-  const { theme } = useContext(ThemeContext);
+
   const { id } = useParams();
   const [producto, setProducto] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -74,7 +73,7 @@ function DetalleProducto() {
     );
 
   return (
-    <div className={`backgroundDetalleProducto app ${theme} `}>
+    <div className="backgroundDetalleProducto app">
       <div className="detalleProducto ">
         <h2>{producto.modelo}</h2>
         <p>{producto.descripcion}</p>

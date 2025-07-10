@@ -1,16 +1,14 @@
-import { useContext, useState } from 'react'
-import ThemeContext from './themeContext'
-import './themeContext.css'
+import { useState } from 'react'
 import './Nosotros.css'
 
 function Nosotros() {
-  const {theme} = useContext(ThemeContext)
+
   const [showValues, setShowValues] = useState(false)
   const [showMission, setShowMission] = useState(false)
   const [showVision, setShowVision] = useState(false)
 
   return (
-    <section className={`nosotros app ${theme}`}>
+    <section className='nosotros app'>
       <div className="animated-bg-nosotros">
         <div className="contentContainer modern-nosotros">
           <h2 className="title">¿Por qué elegirnos para tu e-commerce personalizado?</h2>

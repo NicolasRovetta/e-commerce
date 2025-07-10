@@ -1,14 +1,13 @@
-import { useContext, useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import Swal from "sweetalert2"; 
-import ThemeContext from "./themeContext";
-import "./themeContext.css";
+
 import "./cart.css";
 import { addProductCart } from "./DetalleProducto";
 import Checkout from "./Checkout";
 import axios from "axios"; 
 
 function Cart() {
-  const { theme } = useContext(ThemeContext);
+
   const [cartItems, setCartItems] = useState([]);
 
   useEffect(() => {
@@ -75,8 +74,8 @@ function Cart() {
   };
 
   return (
-    <div className={`containerCart app ${theme}`}>
-      <div className={`cart ${theme}`}>
+    <div className="containerCart app">
+      <div className="cart">
         {cartItems.length === 0 ? <h2>Carrito vacío</h2> : <h2>Carrito</h2>}
         <div className="cart-header">
           <button type="reset" onClick={clearCart} aria-label="Vaciar carrito" className="clear-cart-btn">
@@ -102,7 +101,7 @@ function Cart() {
           ))}
         </ul>
       </div>
-      <div className={`formulario ${theme}`}>
+      <div className="formulario">
         <form onSubmit={handlePurchase}>
           <h2>Finalizar Compra</h2>
           <div className="form-group">

@@ -15,7 +15,7 @@
     min-height: 100vh;
     overflow: hidden;
     background: rgb(100, 100, 124);
-    padding-bottom: 6em;
+    margin-bottom: 8em;
   }
 
   .textHome{

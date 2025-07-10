@@ -1,14 +1,12 @@
-import { useContext, useState } from 'react'
-import ThemeContext from './themeContext'
-import './themeContext.css'
+import { useState } from 'react'
 import './Home.css'
 
 function Home() {
-  const {theme} = useContext(ThemeContext)
+
   const [showMore, setShowMore] = useState(false)
 
   return (
-    <section className={`home app ${theme}`}>
+    <section className='home app'>
       <div className="animated-bg">
         <div className="contentContainerHome modern-home">
           <h2 className="titleHome">iStore: Tu experiencia Apple personalizada</h2>

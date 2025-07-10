@@ -2,17 +2,12 @@ import { useEffect, useState } from "react"
 import ItemList from "./ItemList"
 import { getFirestore, collection, getDocs } from 'firebase/firestore';
 import './ItemListContainer.css'
-import { useContext } from 'react'
-import ThemeContext from './themeContext'
-import './themeContext.css'
 
 function ItemListContainer() {
      const [items, setItems] = useState([])
      const [loading, setLoading] = useState(true)
      const [currentPage, setCurrentPage] = useState(1)
      const itemsPerPage = 10 // Puedes ajustar la cantidad por página
-
-     const {theme} = useContext(ThemeContext) // consumo el contexto!!
 
      useEffect(()=> {
         const fetchProductos = async () => {
@@ -42,7 +37,7 @@ function ItemListContainer() {
   };
 
   return (
-    <div className={`container app ${theme}`}>     
+    <div className="container app">     
         {loading 
           ? <div style={{textAlign: 'center', marginTop: '2em',color: 'black'}}>Cargando productos...</div> 
           : <>

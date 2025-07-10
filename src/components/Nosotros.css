@@ -8,13 +8,13 @@
   max-width: 900px;
   margin: 2em auto;
   box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+  margin-bottom: 8em;
 }
 
 .nosotros {
   background: rgb(100, 100, 124);
   min-height: 100vh;
   padding: 0;
-  padding-bottom: 6em;
 }
 
 .features-grid {

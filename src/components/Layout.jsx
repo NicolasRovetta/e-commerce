@@ -4,11 +4,11 @@ import CartWidget from "./CartWidget";
 import { Link, Outlet } from "react-router-dom";
 import React, { useState } from 'react';
 import logoWp from "../assets/logoWp.png";
-import './themeContext.css';
+
 import { FaSun, FaMoon } from "react-icons/fa";
 import AuthForm from "./AuthForm";
 
-function Layout({ toggleTheme, theme, isAuthenticated, handleLogin }) {
+function Layout({ isAuthenticated, handleLogin }) {
   const [menuActive, setMenuActive] = useState(false);
 
   const toggleMenu = () => setMenuActive(!menuActive);
@@ -23,16 +23,13 @@ function Layout({ toggleTheme, theme, isAuthenticated, handleLogin }) {
 
   return (
     <>
-      <button className="buttonTheme" onClick={toggleTheme} aria-label="Toggle theme">
-        {theme === 'light' ? <FaMoon aria-label="Switch to dark mode" /> : <FaSun aria-label="Switch to light mode" />}
-      </button>
       {!isAuthenticated && (
         <>
           <div className="blur-background"></div>
           <AuthForm onLogin={handleLogin} />
         </>
       )}
-      <nav className={`layout app ${theme}`}>
+      <nav className="layout app">
         <div className="hamburger-menu" onClick={toggleMenu}>
           <div></div>
           <div></div>
