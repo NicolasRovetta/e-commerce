@@ -13,7 +13,7 @@ function Item({ categoria, modelo, precio, id, image, descripcion }) {
     if (cantidad === 0) {
       Swal.fire({
         title: "Cantidad inválida",
-        text: "Debe agregar al menos un producto al carrito",
+        text: "Agregar al menos un producto al carrito",
         icon: "error",
         confirmButtonText: "Aceptar",
       });
