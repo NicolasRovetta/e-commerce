@@ -3,5 +3,5 @@ import react from '@vitejs/plugin-react';
 
 export default defineConfig({
   plugins: [react()],
-  base: "", 
+  base: '/e-commerce/', // Cambiado para despliegue en GitHub Pages
 });

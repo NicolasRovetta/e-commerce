@@ -25,7 +25,14 @@ function App() {
       <div className='app'>
       <BrowserRouter basename={basename}>
         <Routes>
-          <Route path="/" element={<Layout isAuthenticated={isAuthenticated} handleLogin={handleLogin}/>}>
+          <Route path="/e-commerce/" element={<Layout isAuthenticated={isAuthenticated} handleLogin={handleLogin}/>}>
+            <Route index element={<Home/>} />
+            <Route path="productos" element={<ItemListContainer/>} />
+            <Route path="productos/:id" element={<DetalleProducto/>} />
+            <Route path="nosotros" element={<Nosotros/>} />
+            <Route path="cart" element={<Cart/>} />        
+          </Route>
+          <Route path="/" element={<Layout isAuthenticated={isAuthenticated} handleLogin={handleLogin}/>}> 
             <Route index element={<Home/>} />
             <Route path="productos" element={<ItemListContainer/>} />
             <Route path="productos/:id" element={<DetalleProducto/>} />
